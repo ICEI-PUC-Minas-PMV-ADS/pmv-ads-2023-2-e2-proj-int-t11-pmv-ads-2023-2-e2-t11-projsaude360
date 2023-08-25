@@ -1,17 +1,17 @@
-# TÍTULO DO PROJETO
+# SAÚDE 360
 
-`CURSO`
+`Análise e Desenvolvimento de Sistemas`
 
-`DISCIPLINA`
+`Projeto: Desenvolvimento de uma Aplicação Interativa`
 
-`SEMESTRE`
+`Eixo 2`
 
 Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
 
 ## Integrantes
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
+* Láisa Liane da Silva Marinho Costa
+* Maria Júlia
 * Nome completo do aluno 3
 * Nome completo do aluno 4
 

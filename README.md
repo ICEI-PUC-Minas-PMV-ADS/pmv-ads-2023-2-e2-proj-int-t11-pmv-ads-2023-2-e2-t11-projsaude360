@@ -11,13 +11,13 @@ Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo de
 ## Integrantes
 
 * Láisa Liane da Silva Marinho Costa
-* Maria Júlia
+* Maria Júlia Guimarães Figueiredo
 * Nome completo do aluno 3
 * Nome completo do aluno 4
 
 ## Orientador
 
-* Nome completo do professor 1
+* Neil Paiva Tizzo
 
 ## Instruções de utilização
 

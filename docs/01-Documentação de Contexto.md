@@ -1,46 +1,33 @@
 # Introdução
 
-Texto descritivo com a visão geral do projeto abordado. Inclui o contexto, o problema, os objetivos, a justificativa e o público-alvo do projeto.
+<p>Observando o cenário atual, é perceptível que há uma complexidade das demandas do gerenciamento de saúde individual, assim como a expansão das informações médicas disponíveis nos mais diversos meios de pesquisa, retratando a necessidade de ferramentas eficazes, que acompanhem este crescimento, filtrem e auxiliem na gestão dos tratamentos individuais, acompanhamento de ciclos biológicos, além do monitoramento das consultas, entre outros conforme o perfil do usuário. Diante disso, está sendo proposto um site, chamado de Saúde360, como uma solução inovadora que oferece uma abordagem ampla independente do gênero para que as pessoas sejam mais promissoras em seus cuidados pessoais.</p>
+<p>O cenário moderno caracteriza-se pelo acesso ampliado a informações médicas e pela crescente valorização do autocuidado. Contudo, o avanço tecnológico e informacional frequentemente sobrecarrega os indivíduos, gerando desafios na organização eficaz de sua saúde. Diante dessa realidade, este artigo se dedica a investigar as dificuldades enfrentadas pelas pessoas na administração de sua saúde. A resposta proposta é a criação de um site de monitoramento, "Saúde360", que visa simplificar, de maneira intuitiva e acessível, a interação do usuário com suas necessidades de gestão de tratamentos, ciclos biológicos, consultas e demais aspectos.</p>
+<p>Este artigo vai explorar as dificuldades enfrentadas pelas pessoas em administrar sua saúde e como solução proposta será a criação do site Saúde360, contribuindo para a melhoria da experiência de cuidado pessoal. Ao promover uma abordagem prática e facilitadora, o site se propõe a atender às demandas do gerenciamento de saúde de forma eficiente, capacitando os usuários a superar obstáculos e otimizar sua saúde de maneira personalizada. Permitindo também aos usuários a capacidade de tomar decisões informadas e oportunas em relação à sua saúde.</p>
+
 
 ## Problema
-Nesse momento você deve apresentar o problema que a sua aplicação deve  resolver. No entanto, não é a hora de comentar sobre a aplicação.
-
-Descreva também o contexto em que essa aplicação será usada, se  houver: empresa, tecnologias, etc. Novamente, descreva apenas o que de  fato existir, pois ainda não é a hora de apresentar requisitos  detalhados ou projetos.
-
-Nesse momento, o grupo pode optar por fazer uso  de ferramentas como Design Thinking, que permite um olhar de ponta a ponta para o problema.
-
-> **Links Úteis**:
-> - [Objetivos, Problema de pesquisa e Justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
-> - [Matriz Certezas, Suposições e Dúvidas](https://medium.com/educa%C3%A7%C3%A3o-fora-da-caixa/matriz-certezas-suposi%C3%A7%C3%B5es-e-d%C3%BAvidas-fa2263633655)
-> - [Brainstorming](https://www.euax.com.br/2018/09/brainstorming/)
+<p>Gerenciar de forma eficaz a própria saúde tornou-se um desafio diante de tamanhas informações médicas disponíveis em sites ou aplicativos, o que tende a gerar uma complexidade ao usuário de se ater ao seu tratamento. Além disso, é comumente visto pessoas esquecerem suas consultas, exames a serem realizados, a dosagem de seus medicamentos ou não compreender sobre o seu tratamento e o quanto pode avançar para ter eficácia, dentre outros mais comuns como marcar ciclos menstruais, realizar anotações, anotações para dúvidas da próxima consulta, ou anotações para acompanhar o que os médicos falam.</p>
+<p>No entanto, tais dificuldades podem levar a atrasos no tratamento, interrupções na terapia medicamentosa e perdas de oportunidades para aumentar a qualidade de vida. A falta de uma abordagem integrada para lidar com essas questões, resulta num impacto negativo na eficiência do tratamento quanto na experiência do paciente.</p>
 
 ## Objetivos
 
-Aqui você deve descrever os objetivos do trabalho indicando que o objetivo geral é desenvolver um software para solucionar o problema apresentado acima. 
+<h3>Objetivo Geral</h3>
+<p>Este estudo tem como objetivo geral, compreender como a criação do site, Saúde360, permitirá que os usuários mapeiem e monitorem sua saúde de maneira conveniente e personalizada, facilitando a adesão aos tratamentos.</p>
+<h3>Objetivos Específicos</h3>
+<ul>
+ <li>Investigar as principais dificuldades enfrentadas por indivíduos na gestão da sua saúde, incluindo a administração de tratamentos médicos;</li>
+ <li>Desenvolver e implementar o site "Saúde360";</li>
+ <li>Analisar a usabilidade e a experiência do usuário do site "Saúde360", coletando feedback dos usuários por meio de questionários e entrevistas.</li>
+</ul>
 
-Apresente também alguns (pelo menos 2) objetivos específicos dependendo de onde você vai querer concentrar a sua prática investigativa, ou como você vai aprofundar no seu trabalho.
- 
-> **Links Úteis**:
-> - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
 
 ## Justificativa
 
-Descreva a importância ou a motivação para trabalhar com esta aplicação que você escolheu. Indique as razões pelas quais você escolheu seus objetivos específicos ou as razões para aprofundar em certos aspectos do software.
+<p>Tendo em vista que a modernidade trouxe um acelerado aumento no acesso a informações médicas e uma maior conscientização sobre a importância do autocuidado, por conseguinte, a complexidade que acompanha esse progresso pode muitas vezes sobrecarregar os indivíduos, levando a dificuldades na organização de sua saúde de maneira eficiente. O esquecimento da realização de exames ou de tomar os remédios na hora exata, não compreender o que precisa ser feito para a sua melhora, se tornaram tarefas desafiadoras para muitas pessoas, resultando em consequências negativas para a eficácia do tratamento e o bem-estar geral.</p>
+<p>Diante desse cenário, a criação do site Saúde360 apresenta-se como uma resposta essencial para atender tais demandas. Por isso, esse estudo se justifica pela necessidade de oferecer uma solução tecnológica integrada que simplifique a administração da saúde individual.</p>
+<p>O Saúde360 visa não apenas reduzir os problemas de organização enfrentados pelos usuários, mas também otimizar a eficácia dos tratamentos, melhorar o acompanhamento de informações pessoais e facilitar o agendamento de consultas médicas.</p>
 
-O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estatísticos, que podem ser apresentados, com o objetivo de esclarecer detalhes do problema que será abordado pelo grupo.
-
-> **Links Úteis**:
-> - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
 
 ## Público-Alvo
 
-Descreva quem serão as pessoas que usarão a sua aplicação indicando os diferentes perfis. O objetivo aqui não é definir quem serão os clientes ou quais serão os papéis dos usuários na aplicação. A ideia é, dentro do possível, conhecer um pouco mais sobre o perfil dos usuários: conhecimentos prévios, relação com a tecnologia, relações
-hierárquicas, etc.
-
-Adicione informações sobre o público-alvo por meio de uma descrição textual, diagramas de personas e mapa de stakeholders.
-
-> **Links Úteis**:
-> - [Público-alvo](https://blog.hotmart.com/pt-br/publico-alvo/)
-> - [Como definir o público alvo](https://exame.com/pme/5-dicas-essenciais-para-definir-o-publico-alvo-do-seu-negocio/)
-> - [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
-> - [Qual a diferença entre público-alvo e persona?](https://rockcontent.com/blog/diferenca-publico-alvo-e-persona/)
+<p>O público alvo do site Saúde360 abrange uma variedade de perfis, desde pacientes com necessidades médicas específicas até aqueles que buscam simplificar a gestão de sua saúde diária. A plataforma é projetada para ser acessível e útil para um público diversificado em busca de uma abordagem mais eficaz para o cuidado com a saúde.</p>

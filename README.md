@@ -12,8 +12,9 @@ Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo de
 
 * Láisa Liane da Silva Marinho Costa
 * Maria Júlia Guimarães Figueiredo
-* Nome completo do aluno 3
-* Nome completo do aluno 4
+* Pedro Henrique Corrêa
+* Bruno Alves da Fonseca
+* Lucas Gonçalves Oliveira
 
 ## Orientador
 

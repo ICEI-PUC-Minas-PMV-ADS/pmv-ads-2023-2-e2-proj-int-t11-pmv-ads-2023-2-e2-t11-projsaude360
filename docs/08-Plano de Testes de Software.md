@@ -60,10 +60,10 @@
 |Critério de Êxito | - Cadastrar Consultas para lembrete. |
 |  	|  	|
 
-| **Caso de Teste** 	| **CT-08 – Teste de comportamento para averiguar as Consultas**	|
+| **Caso de Teste** 	| **CT-08 – Teste de comportamento para averiguar as Consultas**	                                                  |
 |:---:	|:---:	|
-|Requisito Associado | RF-001 e RF-003. |
-| Objetivo do Teste 	| Verificar se o usuario consegue conferir as consultas cadastradas  |
+|Requisito Associado | RF-001 e RF-003.                                                                                                 |
+| Objetivo do Teste 	| Verificar se o usuario consegue conferir as consultas cadastradas                                                |             
 | Passos 	| - Usuário logado <br> - Clicar em Consultas - Listagem das consultas <br> - Clicar na consulta desejada -  Editar ou Excluir|
 |Critério de Êxito | - Averiguar Consultas. |
 |  	|  	|

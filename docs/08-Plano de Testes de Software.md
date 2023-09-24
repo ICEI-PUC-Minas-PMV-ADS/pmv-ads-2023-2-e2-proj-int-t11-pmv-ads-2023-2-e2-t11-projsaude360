@@ -67,3 +67,35 @@
 | Passos 	| - Usuário logado <br> - Clicar em Consultas - Listagem das consultas <br> - Clicar na consulta desejada -  Editar ou Excluir|
 |Critério de Êxito | - Averiguar Consultas. |
 |  	|  	|
+
+ | **Caso de Teste** 	| **CT-09 – Teste de comportamento para Cadastro Ciclo Menstrual**	|
+|:---:	|:---:	|
+|Requisito Associado | RF-001 e RF-003. |
+| Objetivo do Teste 	| Verificar se o comportamento e validação das classes de Ciclo menstrual  |
+| Passos 	| - Usuário logado <br> - Clicar em Ciclo Menstrual - Preencher os campos: Duração, Medicação utilizada, Fluxo, Condição - Clicar em Salvar <br> - |
+|Critério de Êxito | - Cadastrar ciclo menstrual. |
+|  	|  	|
+
+| **Caso de Teste** 	| **CT-10 – Teste de comportamento para averiguar as Acompanhamento Diário**	                                                  |
+|:---:	|:---:	|
+|Requisito Associado | RF-001 e RF-003.                                                                                                 |
+| Objetivo do Teste 	| Verificar se o usuario consegue consultar o Acompanhamento diário do ciclo biológico   |             
+| Passos 	| - Usuário logado <br> - Clicar em Ciclo Menstrual - Clicar em acompanhamento diário <br> - Editar/Inserir o ciclo menstrual -  Ter acesso ao calendário |
+|Critério de Êxito | - Consultar Acompanhamento diário. |
+|  	|  	|
+
+| **Caso de Teste** 	| **CT-11 – Teste de comportamento para averiguar as Alterações fisicas**	                                                  |
+|:---:	|:---:	|
+|Requisito Associado | RF-001 e RF-003.                                                                                                 |
+| Objetivo do Teste 	| Verificar se o usuario consegue consultar as Alterações Fisicas    |             
+| Passos 	| - Usuário logado <br> - Clicar em Ciclo Menstrual - Clicar em Alterações Fisicas <br> - Marcar as alterações correspondentes  |
+|Critério de Êxito | - Consultar Alterações fisicas. |
+|  	|  	|
+
+| **Caso de Teste** 	| **CT-12 – Teste de comportamento para averiguar o Humor**	                                                  |
+|:---:	|:---:	|
+|Requisito Associado | RF-001 e RF-003.                                                                                                 |
+| Objetivo do Teste 	| Verificar se o usuario consegue consultar as Alterações de Humor    |             
+| Passos 	| - Usuário logado <br> - Clicar em Ciclo Menstrual - Clicar em Alterações de Humor <br> - Marcar as alterações correspondentes  |
+|Critério de Êxito | - Consultar Alterações de Humor. |
+|  	|  	|

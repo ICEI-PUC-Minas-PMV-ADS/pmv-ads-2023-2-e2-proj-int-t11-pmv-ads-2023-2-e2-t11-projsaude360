@@ -1,15 +1,29 @@
 # Plano de Testes de Usabilidade
 
 Os testes de usabilidade permitem avaliar a qualidade da interface com o usuário da aplicação interativa.
+<h2> Teste de Cadastro</h2>
 
-Um plano de teste de usabilidade deverá conter: o detalhamento dos objetivos (em função dos requisitos levantados/implementados), dos critérios que serão utilizados para a seleção dos participantes, dos procedimentos a serem adotados pelos condutores de teste (por exemplo: os testes serão presenciais ou remotos? o método será observação direta, medição ou avaliação?), das tarefas a serem executadas, dos dados a serem coletados (quantidade de cliques, número de erros, tempo etc.), a ordem de execução das tarefas e das etapas da sessão de teste, recursos demandados, métricas coletadas etc.
+<p>O primeiro teste de usabilidade consiste no teste de cadastro, o usuário deve acessar a página de cadastro, cadastrar as informações requeridas (que serão validadas), aceitar os termos e clicar no botão cadastro, a partir daí deve ser criado um perfil para o usuário com as informações cadastradas.</p>
 
-Para cada voluntário do teste, é fundamental coletar e apresentar todos os dados/métricas previamente definidos, mas não se esqueça: atendendo à LGPD (Lei Geral de Proteção de Dados), nenhum dado sensível, que permita identificar o voluntário, deverá ser apresentado).
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t11-pmv-ads-2023-2-e2-t11-projsaude360/assets/125780065/d0ed4c60-1296-4566-86c2-74c2339566b6)
 
-As referências abaixo irão auxiliá-lo na geração do artefato "Plano de Testes de Usabilidade".
+<h2>Teste de Login</h2>
 
-> **Links Úteis**:
-> - [Teste De Usabilidade: O Que É e Como Fazer Passo a Passo (neilpatel.com)](https://neilpatel.com/br/blog/teste-de-usabilidade/)
-> - [Teste de usabilidade: tudo o que você precisa saber! | by Jon Vieira | Aela.io | Medium](https://medium.com/aela/teste-de-usabilidade-o-que-voc%C3%AA-precisa-saber-39a36343d9a6/)
-> - [Planejando testes de usabilidade: o que (e o que não) fazer | iMasters](https://imasters.com.br/design-ux/planejando-testes-de-usabilidade-o-que-e-o-que-nao-fazer/)
-> - [Ferramentas de Testes de Usabilidade](https://www.usability.gov/how-to-and-tools/resources/templates.html)
+<p>A partir das informações utilizadas no cadastro de usuário do primeiro teste, o usuário deve ser capaz de realizar o login na aplicação com seu Email e senha e a partir dai ser redirecionado para funcionalidades só liberadas para usuários cadastrados.</p>
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t11-pmv-ads-2023-2-e2-t11-projsaude360/assets/125780065/1c432d47-c3ef-44c3-ab49-c8046e98fe12)
+
+<h2>Teste de comportamento dos medicamentos, tratamentos e consultas</h2>
+
+<p>Nessas 3 páginas o comportamento deve ser semelhante, o usuário deverá ter a possibilidade de visualizar, adicionar, excluir ou editar todos os seus tratamentos, medicamentos e consultas todas essas funções devem funcionar adequadamente e as páginas deverão ser atualizadas ao salvar alguma dessas alterações.</p>
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t11-pmv-ads-2023-2-e2-t11-projsaude360/assets/125780065/efb069fb-4208-4362-9c62-2b9aa8f84138)
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t11-pmv-ads-2023-2-e2-t11-projsaude360/assets/125780065/aab7e1cb-b1d6-448c-b80e-d88122448075)
+
+<h2>Teste página comportamento menstrual/modais comportamento menstrual</h2>
+
+<p>A partir da página de comportamento menstrual o usuário deve ser capaz de avançar para 3 possíveis modais, são eles: Acompanhamento diária, alterações físicas e humor, a partir de cada um desses modais deve ser possível identificar informações importantes como dias específicos dentro do ciclo menstrual assim como alterações físicas e de humor baseado nesses dias específicos tornando o controle do ciclo menstrual mais efetivo e direto através da aplicação.</p>
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t11-pmv-ads-2023-2-e2-t11-projsaude360/assets/125780065/95705543-6411-4696-aebe-3c2375e5b4d6)
+

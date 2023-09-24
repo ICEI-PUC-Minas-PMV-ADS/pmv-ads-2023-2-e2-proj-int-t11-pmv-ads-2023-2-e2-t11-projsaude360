@@ -10,7 +10,7 @@
 | Objetivo do Teste 	| Verificar se o usuário consegue se cadastrar na aplicação. |
 | Passos 	| - O usuário deve, na pagina inicial, clicar em Entrar, será direcionado a tela de cadastro e deverá fornecer as seguintes informações requeridas: Nome completo; gênero; Tipo de tratamento; Data de nascimento (formato DD/MM/AAAA); E-mail; telefone(contendo DDD) e senha <br> - Aceitar os termos de uso <br> - Clicar em "Cadastrar" |
 |Critério de Êxito | - O cadastro foi realizado com sucesso e os dados armazenados com um Id único de identificação no banco de dados |
-
+|  	|  	|
  
 | **Caso de Teste** 	| **CT-02 – Login** 	|
 |:---:	|:---:	|
@@ -19,17 +19,51 @@
 | Passos 	| - Acessar o navegador <br> - Informar o e-mail<br> <br> - senha <br> - Clicar em "Entrar" |
 |Critério de Êxito | - O Login foi realizado com sucesso. validação através dos dados da classe Usuário e da classe AutenticaçaoUsuário |
 |  	|  	|
-| Caso de Teste 	| CT-03 – Teste de comportamento dos medicamentos, tratamentos e consultas	|
-|Requisito Associado | RF-00Y	- A aplicação deve possuir opção de fazer login, sendo o login o endereço de e-mail. |
-| Objetivo do Teste 	| Verificar se o usuário consegue realizar login. |
-| Passos 	| - Acessar o navegador <br> - Informar o endereço do site https://adota-pet.herokuapp.com/src/index.html<br> - Clicar no botão "Entrar" <br> - Preencher o campo de e-mail <br> - Preencher o campo da senha <br> - Clicar em "Login" |
-|Critério de Êxito | - O login foi realizado com sucesso. |
 
- 
-> **Links Úteis**:
-> - [IBM - Criação e Geração de Planos de Teste](https://www.ibm.com/developerworks/br/local/rational/criacao_geracao_planos_testes_software/index.html)
-> - [Práticas e Técnicas de Testes Ágeis](http://assiste.serpro.gov.br/serproagil/Apresenta/slides.pdf)
-> -  [Teste de Software: Conceitos e tipos de testes](https://blog.onedaytesting.com.br/teste-de-software/)
-> - [Criação e Geração de Planos de Teste de Software](https://www.ibm.com/developerworks/br/local/rational/criacao_geracao_planos_testes_software/index.html)
-> - [Ferramentas de Test para Java Script](https://geekflare.com/javascript-unit-testing/)
-> - [UX Tools](https://uxdesign.cc/ux-user-research-and-user-testing-tools-2d339d379dc7)
+| **Caso de Teste** 	| **CT-03 – Teste de comportamento para cadastro dos medicamentos**	|
+|:---:	|:---:	|
+|Requisito Associado | RF-001 e RF-003. |
+| Objetivo do Teste 	| Verificar se o comportamento e validação das classes de medicamentos. |
+| Passos 	| - Usuário logado <br> - Clicar em medicamento - Adicionar Medicamento - Preencher os campos: Nome do medicamento, Informações sobre, Dosagem e Observações <br> - Clicar em "Adicionar" |
+|Critério de Êxito | - Cadastrar medicamento. |
+|  	|  	|
+
+| **Caso de Teste** 	| **CT-04 – Teste de comportamento para consulta dos medicamentos**	|
+|:---:	|:---:	|
+|Requisito Associado | RF-001 e RF-003. |
+| Objetivo do Teste 	| Verificar se o usuario consegue consultar os medicamentos cadastrados  |
+| Passos 	| - Usuário logado <br> - Clicar em medicamento - Listagem de medicamento <br> - |
+|Critério de Êxito | - Consultar medicamento. |
+|  	|  	|
+
+ | **Caso de Teste** 	| **CT-05 – Teste de comportamento para Cadastro dos tratamentos**	|
+|:---:	|:---:	|
+|Requisito Associado | RF-001 e RF-003. |
+| Objetivo do Teste 	| Verificar se o comportamento e validação das classes de tratamentos  |
+| Passos 	| - Usuário logado <br> - Clicar em Tratamento - Adicionar Tratamento - Preencher os campos: Tipo de tratamento, Duração do tratamento, Medicação, administração do medicamente <br> - |
+|Critério de Êxito | - Cadastrar Tratamento. |
+|  	|  	|
+
+| **Caso de Teste** 	| **CT-06 – Teste de comportamento para consulta dos Tratamentos**	|
+|:---:	|:---:	|
+|Requisito Associado | RF-001 e RF-003. |
+| Objetivo do Teste 	| Verificar se o usuario consegue consultar os tratamentos cadastrados  |
+| Passos 	| - Usuário logado <br> - Clicar em Tratamento - Listagem dos tratamentos<br> - Clicar no tratamento desejado|
+|Critério de Êxito | - Consultar tratamento. |
+|  	|  	|
+
+ | **Caso de Teste** 	| **CT-07 – Teste de comportamento para Cadastro das Consultas**	|
+|:---:	|:---:	|
+|Requisito Associado | RF-001 e RF-003. |
+| Objetivo do Teste 	| Verificar se o comportamento e validação das classes de consultas  |
+| Passos 	| - Usuário logado <br> - Clicar em Consultas - Adicionar Consulta - Preencher os campos: Nome do médico, Motivo, Data, anotações e recomendações - Clicar em Salvar <br> - |
+|Critério de Êxito | - Cadastrar Consultas para lembrete. |
+|  	|  	|
+
+| **Caso de Teste** 	| **CT-08 – Teste de comportamento para averiguar as Consultas**	|
+|:---:	|:---:	|
+|Requisito Associado | RF-001 e RF-003. |
+| Objetivo do Teste 	| Verificar se o usuario consegue conferir as consultas cadastradas  |
+| Passos 	| - Usuário logado <br> - Clicar em Consultas - Listagem das consultas <br> - Clicar na consulta desejada -  Editar ou Excluir|
+|Critério de Êxito | - Averiguar Consultas. |
+|  	|  	|

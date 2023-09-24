@@ -2,20 +2,24 @@
 
 <span style="color:red">Pré-requisitos: <a href="2-Especificação do Projeto.md"> Especificação do Projeto</a></span>, <a href="3-Projeto de Interface.md"> Projeto de Interface</a>
 
-Apresente os cenários de testes utilizados na realização dos testes da sua aplicação. Escolha cenários de testes que demonstrem os requisitos sendo satisfeitos.
+<p>Abaixo estão os cenários levantados e listados nos casos de teste de forma a atender os requisitos dessa aplicação:</p>
 
-Não deixe de enumerar os casos de teste de forma sequencial e de garantir que o(s) requisito(s) associado(s) a cada um deles está(ão) correto(s) - de acordo com o que foi definido na seção "2 - Especificação do Projeto". 
-
-Por exemplo:
- 
-| **Caso de Teste** 	| **CT-01 – Cadastrar perfil** 	|
+| **Caso de Teste** 	| **CT-01 – Tela de Cadastro** 	|
 |:---:	|:---:	|
-|	Requisito Associado 	| RF-00X - A aplicação deve apresentar, na página principal, a funcionalidade de cadastro de usuários para que esses consigam criar e gerenciar seu perfil. |
+|	Requisito Associado 	| RF-005|
 | Objetivo do Teste 	| Verificar se o usuário consegue se cadastrar na aplicação. |
-| Passos 	| - Acessar o navegador <br> - Informar o endereço do site https://adota-pet.herokuapp.com/src/index.html<br> - Clicar em "Criar conta" <br> - Preencher os campos obrigatórios (e-mail, nome, sobrenome, celular, CPF, senha, confirmação de senha) <br> - Aceitar os termos de uso <br> - Clicar em "Registrar" |
-|Critério de Êxito | - O cadastro foi realizado com sucesso. |
+| Passos 	| - O usuário deve, na pagina inicial, clicar em Entrar, será direcionado a tela de cadastro e deverá fornecer as seguintes informações requeridas: Nome completo; gênero; Tipo de tratamento; Data de nascimento (formato DD/MM/AAAA); E-mail; telefone(contendo DDD) e senha <br> - Aceitar os termos de uso <br> - Clicar em "Cadastrar" |
+|Critério de Êxito | - O cadastro foi realizado com sucesso e os dados armazenados com um Id único de identificação no banco de dados |
+
+ 
+| **Caso de Teste** 	| **CT-02 – Login** 	|
+|:---:	|:---:	|
+|	Requisito Associado 	| RF-006 |
+| Objetivo do Teste 	| Verificar se o usuário consegue realizar Login na aplicação. |
+| Passos 	| - Acessar o navegador <br> - Informar o e-mail<br> <br> - senha <br> - Clicar em "Entrar" |
+|Critério de Êxito | - O Login foi realizado com sucesso. validação através dos dados da classe Usuário e da classe AutenticaçaoUsuário |
 |  	|  	|
-| Caso de Teste 	| CT-02 – Efetuar login	|
+| Caso de Teste 	| CT-03 – Teste de comportamento dos medicamentos, tratamentos e consultas	|
 |Requisito Associado | RF-00Y	- A aplicação deve possuir opção de fazer login, sendo o login o endereço de e-mail. |
 | Objetivo do Teste 	| Verificar se o usuário consegue realizar login. |
 | Passos 	| - Acessar o navegador <br> - Informar o endereço do site https://adota-pet.herokuapp.com/src/index.html<br> - Clicar no botão "Entrar" <br> - Preencher o campo de e-mail <br> - Preencher o campo da senha <br> - Clicar em "Login" |

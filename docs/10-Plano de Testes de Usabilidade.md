@@ -23,7 +23,7 @@ Os testes de usabilidade permitem avaliar a qualidade da interface com o usuári
 
 <h2>Teste página comportamento menstrual/modais comportamento menstrual</h2>
 
-<p>A partir da página de comportamento menstrual o usuário deve ser capaz de avançar para 3 possíveis modais, são eles: Acompanhamento diária, alterações físicas e humor, a partir de cada um desses modais deve ser possível identificar informações importantes como dias específicos dentro do ciclo menstrual assim como alterações físicas e de humor baseado nesses dias específicos tornando o controle do ciclo menstrual mais efetivo e direto através da aplicação.</p>
+<p>A partir da página de comportamento menstrual o usuário deve ser capaz de avançar para 3 possíveis modais, são eles: Acompanhamento diário, alterações físicas e humor, a partir de cada um desses modais deve ser possível identificar informações importantes como dias específicos dentro do ciclo menstrual assim como alterações físicas e de humor. Baseado nesses dias específicos e tornando o controle do ciclo menstrual mais efetivo através do site.</p>
 
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t11-pmv-ads-2023-2-e2-t11-projsaude360/assets/125780065/95705543-6411-4696-aebe-3c2375e5b4d6)
 

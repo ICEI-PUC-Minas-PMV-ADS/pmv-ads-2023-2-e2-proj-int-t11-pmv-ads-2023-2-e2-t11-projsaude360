@@ -71,5 +71,5 @@ Em complemento para auxiliar no acompanhamento do progresso das tarefas e sua di
 
 O quadro scrum referente a Sprint 2, está representado abaixo no Jira conforme figura 1 abaixo e disponível através da URL https://saude360.atlassian.net/jira/software/projects/SCRUM/boards/1 
 
-![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t11-pmv-ads-2023-2-e2-t11-projsaude360/assets/125780065/895517c9-7e7b-4933-96fc-54bb660e3f7a)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t11-pmv-ads-2023-2-e2-t11-projsaude360/assets/125780065/135c3e48-3ae2-43f2-994b-c06015a4ff1b)
 

@@ -21,7 +21,7 @@ O Modelo ER demonstra utilizando um diagrama como as entidades presentes no sist
 
 O projeto da base de dados corresponde à representação das entidades e relacionamentos identificadas no Modelo ER, no formato de tabelas, com colunas e chaves primárias/estrangeiras necessárias para representar corretamente as restrições de integridade.
  
-![Uploading Novo mural.jpeg…]()
+![Novo mural](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t11-pmv-ads-2023-2-e2-t11-projsaude360/assets/111026383/0d20ea0d-270f-49e7-a21c-e49ff8732352)
 
 ## Tecnologias Utilizadas
 

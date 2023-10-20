@@ -6,4 +6,37 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Pages\Cadastro\" />
+    <Folder Include="Pages\Login\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\images\background.png" />
+    <None Include="wwwroot\images\Background_Cadastro.png" />
+    <None Include="wwwroot\images\imagem_Cadastro.png" />
+    <None Include="wwwroot\images\imagen_TelaInicial.png" />
+    <None Include="wwwroot\images\Logo.png" />
+    <None Include="wwwroot\images\menu_barra.png" />
+    <None Include="wwwroot\images\seta_amarela.png" />
+    <None Include="wwwroot\images\seta_azul.png" />
+    <None Include="wwwroot\images\seta_rosada.png" />
+    <None Include="wwwroot\images\seta_verde.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="EntityFramework" Version="6.4.4" />
+    <PackageReference Include="Fluent.Infrastructure" Version="2.0.0-beta-01" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.12" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.12">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.12" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.12">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
 </Project>

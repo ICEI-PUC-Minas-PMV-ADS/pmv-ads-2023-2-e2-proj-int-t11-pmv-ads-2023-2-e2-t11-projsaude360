@@ -1,0 +1,197 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Sarala&display=swap');
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+body {
+    font-family: Arial;
+    background: url("/images/background.png");
+    background-size: 100%;
+}
+
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+}
+
+.imagemLogo {
+    padding-left: 120px;
+    padding-top: 15px;
+    height: 40px;
+    width: 80px;
+}
+
+/* .login {
+    align-items: flex-end;
+} */
+
+.botaoLogin {
+    display: flex;
+    margin-top: 15px;
+    margin-right: 50px;
+    height: 45px;
+    width: 153px;
+    padding: 20px 40px;
+    background-color: #00000070;
+    font-size: 20px;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-family: 'Righteous', cursive;
+    font-weight: 400;
+    align-items: center;
+    justify-content: center;
+}
+
+    .botaoLogin:hover {
+        background-color: black;
+        color: white;
+        transition: all .5s;
+    }
+
+ul {
+    list-style: none;
+}
+
+menu {
+    height: 15px;
+    width: 15px;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+nav {
+    background-color: rgba(133, 133, 133, 0.796);
+    width: 350px;
+    left: -350px;
+    height: 100%;
+    position: absolute;
+    transition: all .5s;
+}
+
+input[type="checkbox"]:checked ~ nav {
+    transform: translateX(350px);
+}
+
+.opcoes {
+    position: absolute;
+    top: 70px;
+    width: 100%;
+}
+
+a {
+    display: block;
+    padding: 35px 20px;
+    color: white;
+    font-size: 25px;
+}
+
+    a:hover {
+        background-color: #4846468e;
+    }
+
+label {
+    padding: 20px;
+    position: absolute;
+    z-index: 1;
+}
+
+.separador {
+    margin-top: 30px;
+    margin-left: 70px;
+    margin-right: 70px;
+    border-top: 0.04rem solid #6f6c6c38;
+}
+
+
+.conteudo {
+    margin-top: 150px;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+}
+
+.conteudo-principal {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    padding: 0.9375rem;
+    margin-left: 150px;
+}
+
+.conteudo-principal-escrito {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    color: #000000;
+}
+
+.conteudo-principal-escrito-titulo {
+    display: flex;
+    font-weight: 400;
+    font-size: 2.5rem;
+    font-family: 'Righteous', cursive;
+    align-items: start;
+}
+
+.conteudo-principal-escrito-subtitulo {
+    font-family: 'Righteous', cursive;
+    font-weight: 400;
+    font-size: 1.8rem;
+    color: #6F6C6C;
+}
+
+.conteudo-secundario {
+    font-family: 'Righteous', cursive;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1.4rem;
+    margin-top: 0.9375rem;
+    margin-left: 200px;
+}
+
+.conteudo-secundario-paragrafo {
+    font-family: 'Righteous', cursive;
+    font-weight: 300;
+    font-size: 1.4rem;
+    align-items: center;
+    justify-content: space-around;
+    color: #6F6C6C;
+}
+
+.seta {
+    height: 20px;
+    width: 20px;
+    padding-right: 10px;
+}
+
+.imagem_tela_inicial {
+    height: 600px;
+    width: 800px;
+}
+
+@media (max-width: 999px) {
+    .navigation {
+        position: absolute;
+        top: 8vh;
+        right: 0;
+        width: 50vw;
+        height: 92vh;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+}

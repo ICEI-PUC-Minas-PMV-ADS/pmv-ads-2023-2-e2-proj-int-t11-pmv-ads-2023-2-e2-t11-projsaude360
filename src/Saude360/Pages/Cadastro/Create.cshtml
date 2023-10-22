@@ -1,0 +1,105 @@
+﻿@page
+@model Saude360.Pages.Cadastro.CreateModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/Cadastro/Cadastro.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <title>Saude360</title>
+
+</head>
+
+<body>
+    <header class="cabecalho">
+        <input type="checkbox" id="chec">
+        <label for="chec">
+            <img class="menu" src="/images/menu_barra.png">
+        </label>
+        <nav class="navigation">
+            <ul class="opcoes">
+                <li><a href="https://localhost:7299">Início</a></li>
+                <li><a href="">Perfil</a></li>
+                <li><a href="">Tratamentos</a></li>
+                <li><a href="">Medicamentos</a></li>
+                <li><a href="">Ciclo Menstrual</a></li>
+            </ul>
+        </nav>
+        <img class="imagemLogo" src="/images/Logo.png">
+        <div class="login">
+            <button class="botaoLogin" href="Cadastro.html">Entrar</button>
+        </div>
+    </header>
+
+    <div class="separador">
+        <main class="conteudo">
+            <section class="form-container">
+                <div class="container">
+                    <form method="post" id="frmConcluirCadastro">
+                        <h1 class="titulo-cadastro">É novo por aqui? Vamos nos conhecer melhor!</h1>
+                        <p class="subtitulo-cadastro">Preencha o formulário abaixo para se cadastrar:</p>
+                        <div class="input-single">
+                            <h2>Informações Pessoais:</h2>
+                            <div>
+                                <input type="text" name="" id="nome" class="input" required>
+                                <label for="nome">Nome completo</label>
+                            </div>
+                            <div>
+                                <input type="text" name="" id="login" class="input" required>
+                                <label for="login">Login</label>
+                            </div>
+                            <div>
+                                <input type="text" name="" id="genero" class="input" required>
+                                <label for="genero">Gênero</label>
+                            </div>
+                            <div>
+                                <input type="text" name="" id="dataNascimento" class="input" required>
+                                <label for="data-nascimento">Data de Nascimento</label>
+                            </div>
+                            <div class="info-secundaria-cadastro">
+                                <h3>Contato:</h3>
+                                <div>
+                                    <input type="text" name="" id="email" class="input" required>
+                                    <label for="email">Email</label>
+                                </div>
+                                <div>
+                                    <input type="text" name="" id="telefone" class="input" required>
+                                    <label for="telefone">Telefone</label>
+                                </div>
+                            </div>
+                            <div class="senha">
+                                <h3>Senha:</h3>
+                                <input type="text" name="" id="senha" class="input" required>
+                                <label for="senha">Digite uma senha</label>
+                            </div>
+                            <div class="btn">
+                                <input type="submit" value="enviar">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </section>
+            <div class="imagem-cadastro">
+                <img src="/images/imagem_Cadastro.png">
+            </div>
+        </main>
+    </div>
+
+
+    <footer>
+    </footer>
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    <script type="text/javascript" language="javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="~/js/Cadastro/Cadastro.js"></script>
+</body>
+</html>

@@ -36,7 +36,7 @@
         <img class="imagemLogo" src="/images/Logo.png">
 
         <div class="login">
-            <button class="botaoLogin" href="@*Cadastro.html*@">Entrar</button>
+            <button class="botaoLogin" onclick="window.location.href = 'https://localhost:7299/Cadastro/Create'">Entrar</button>
         </div>
     </header>
 
@@ -88,3 +88,9 @@
 
 
 </html>
+
+<script>
+    function redirecionarCadastro() {
+        window.location.href = "Cadastro/Create.cshtml"
+    }
+</script>

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "eO5Ja/sUHJAkTkJ7TYM9sG2kJtVnHdnYm240KJKj0K8=",
+  "Hash": "wFGEjUno/5MXhjLvoMEROmt48p6OJsdgXC8HNxP1VYw=",
   "Source": "ProjetoSaude360",
   "BasePath": "_content/ProjetoSaude360",
   "Mode": "Default",
@@ -51,12 +51,12 @@
       "OriginalItemSpec": "C:\\Users\\pedro\\source\\repos\\pmv-ads-2023-2-e2-proj-int-t11-pmv-ads-2023-2-e2-t11-projsaude360\\src\\ProjetoSaude360\\ProjetoSaude360\\ProjetoSaude360\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\ProjetoSaude360.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\pedro\\source\\repos\\pmv-ads-2023-2-e2-proj-int-t11-pmv-ads-2023-2-e2-t11-projsaude360\\src\\ProjetoSaude360\\ProjetoSaude360\\ProjetoSaude360\\wwwroot\\css\\Home\\Index.css",
+      "Identity": "C:\\Users\\pedro\\source\\repos\\pmv-ads-2023-2-e2-proj-int-t11-pmv-ads-2023-2-e2-t11-projsaude360\\src\\ProjetoSaude360\\ProjetoSaude360\\ProjetoSaude360\\wwwroot\\css\\Cadastro\\cadastro.css",
       "SourceId": "ProjetoSaude360",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\pedro\\source\\repos\\pmv-ads-2023-2-e2-proj-int-t11-pmv-ads-2023-2-e2-t11-projsaude360\\src\\ProjetoSaude360\\ProjetoSaude360\\ProjetoSaude360\\wwwroot\\",
       "BasePath": "_content/ProjetoSaude360",
-      "RelativePath": "css/Home/Index.css",
+      "RelativePath": "css/Cadastro/cadastro.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -65,7 +65,24 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\Home\\Index.css"
+      "OriginalItemSpec": "wwwroot\\css\\Cadastro\\cadastro.css"
+    },
+    {
+      "Identity": "C:\\Users\\pedro\\source\\repos\\pmv-ads-2023-2-e2-proj-int-t11-pmv-ads-2023-2-e2-t11-projsaude360\\src\\ProjetoSaude360\\ProjetoSaude360\\ProjetoSaude360\\wwwroot\\css\\Home\\index.css",
+      "SourceId": "ProjetoSaude360",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\pedro\\source\\repos\\pmv-ads-2023-2-e2-proj-int-t11-pmv-ads-2023-2-e2-t11-projsaude360\\src\\ProjetoSaude360\\ProjetoSaude360\\ProjetoSaude360\\wwwroot\\",
+      "BasePath": "_content/ProjetoSaude360",
+      "RelativePath": "css/Home/index.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\Home\\index.css"
     },
     {
       "Identity": "C:\\Users\\pedro\\source\\repos\\pmv-ads-2023-2-e2-proj-int-t11-pmv-ads-2023-2-e2-t11-projsaude360\\src\\ProjetoSaude360\\ProjetoSaude360\\ProjetoSaude360\\wwwroot\\css\\site.css",

@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.AspNetCore.Identity;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ProjetoSaude360.Models
@@ -12,7 +13,8 @@ namespace ProjetoSaude360.Models
         [Required]
         public string Nome { get; set; }
 
-        [Required]  
+        [Required]
+        [DataType(DataType.Password)]
         public string Senha { get; set; }
 
         [Required]

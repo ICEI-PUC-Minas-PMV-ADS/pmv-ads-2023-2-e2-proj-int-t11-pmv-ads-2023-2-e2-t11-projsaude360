@@ -53,8 +53,12 @@
       "PackagePath": "staticwebassets\\Images\\seta_verde.png"
     },
     {
-      "Id": "C:\\Users\\pedro\\source\\repos\\pmv-ads-2023-2-e2-proj-int-t11-pmv-ads-2023-2-e2-t11-projsaude360\\src\\ProjetoSaude360\\ProjetoSaude360\\ProjetoSaude360\\wwwroot\\css\\Home\\Index.css",
-      "PackagePath": "staticwebassets\\css\\Home\\Index.css"
+      "Id": "C:\\Users\\pedro\\source\\repos\\pmv-ads-2023-2-e2-proj-int-t11-pmv-ads-2023-2-e2-t11-projsaude360\\src\\ProjetoSaude360\\ProjetoSaude360\\ProjetoSaude360\\wwwroot\\css\\Cadastro\\cadastro.css",
+      "PackagePath": "staticwebassets\\css\\Cadastro\\cadastro.css"
+    },
+    {
+      "Id": "C:\\Users\\pedro\\source\\repos\\pmv-ads-2023-2-e2-proj-int-t11-pmv-ads-2023-2-e2-t11-projsaude360\\src\\ProjetoSaude360\\ProjetoSaude360\\ProjetoSaude360\\wwwroot\\css\\Home\\index.css",
+      "PackagePath": "staticwebassets\\css\\Home\\index.css"
     },
     {
       "Id": "C:\\Users\\pedro\\source\\repos\\pmv-ads-2023-2-e2-proj-int-t11-pmv-ads-2023-2-e2-t11-projsaude360\\src\\ProjetoSaude360\\ProjetoSaude360\\ProjetoSaude360\\wwwroot\\css\\site.css",

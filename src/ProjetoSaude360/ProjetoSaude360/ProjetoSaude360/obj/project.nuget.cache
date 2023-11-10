@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "Z5gzVZQBfWlOaTs5LcLIfYJTzkfrNsSoXfaM1Rs8pZ3dBWYpC7wfm4ON3Gvh1lUOo3SeyVs7m1/4P6mbsDfWkg==",
+  "dgSpecHash": "2aAJHtmtel3iAxa5S5UwrAIijj4Zxkxw+Fuq3PYaqh0UD3oBOENiAgszCgiddGxcEkERIodamK2s1aMtdy2mUA==",
   "success": true,
   "projectFilePath": "C:\\Users\\pedro\\source\\repos\\pmv-ads-2023-2-e2-proj-int-t11-pmv-ads-2023-2-e2-t11-projsaude360\\src\\ProjetoSaude360\\ProjetoSaude360\\ProjetoSaude360\\ProjetoSaude360.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pedro\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\pedro\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
+    "C:\\Users\\pedro\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\pedro\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\pedro\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\pedro\\.nuget\\packages\\humanizer.core.af\\2.14.1\\humanizer.core.af.2.14.1.nupkg.sha512",

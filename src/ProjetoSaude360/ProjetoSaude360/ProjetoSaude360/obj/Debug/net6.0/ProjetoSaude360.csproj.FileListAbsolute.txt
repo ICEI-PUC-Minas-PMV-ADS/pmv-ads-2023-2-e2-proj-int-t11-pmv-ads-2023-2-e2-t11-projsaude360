@@ -265,3 +265,4 @@ C:\Users\pedro\source\repos\pmv-ads-2023-2-e2-proj-int-t11-pmv-ads-2023-2-e2-t11
 C:\Users\pedro\source\repos\pmv-ads-2023-2-e2-proj-int-t11-pmv-ads-2023-2-e2-t11-projsaude360\src\ProjetoSaude360\ProjetoSaude360\ProjetoSaude360\bin\Debug\net6.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\pedro\source\repos\pmv-ads-2023-2-e2-proj-int-t11-pmv-ads-2023-2-e2-t11-projsaude360\src\ProjetoSaude360\ProjetoSaude360\ProjetoSaude360\bin\Debug\net6.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\pedro\source\repos\pmv-ads-2023-2-e2-proj-int-t11-pmv-ads-2023-2-e2-t11-projsaude360\src\ProjetoSaude360\ProjetoSaude360\ProjetoSaude360\bin\Debug\net6.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\pedro\source\repos\pmv-ads-2023-2-e2-proj-int-t11-pmv-ads-2023-2-e2-t11-projsaude360\src\ProjetoSaude360\ProjetoSaude360\ProjetoSaude360\bin\Debug\net6.0\BCrypt.Net-Next.dll

@@ -11,7 +11,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Cadastro.css" />
+    <link rel="stylesheet" href="~/css/Cadastro/cadastro.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <title>Saude360</title>
 </head>
@@ -20,18 +20,18 @@
     <header class="cabecalho">
         <input type="checkbox" id="chec">
         <label for="chec">
-            <img class="menu" src="./img/menu_barra.png">
+            <img class="menu" src="./Images/menu_barra.png">
         </label>
         <nav class="navigation">
             <ul class="opcoes">
-                <li><a href="Index.html">Início</a></li>
+                <li><a href="https://localhost:7156">Início</a></li>
                 <li><a href="">Perfil</a></li>
                 <li><a href="">Tratamentos</a></li>
                 <li><a href="">Medicamentos</a></li>
                 <li><a href="">Ciclo Menstrual</a></li>
             </ul>
         </nav>
-        <img class="imagemLogo" src="./img/Logo.png">
+        <img class="imagemLogo" src="~/Images/Logo.png">
         <div class="login">
             <button class="botaoLogin" href="Cadastro.html">Entrar</button>
         </div>
@@ -47,43 +47,42 @@
                         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                         <div class="input-single">
                             <h2>Informações Pessoais:</h2>
-                            <div class="form-group">
-                                <label asp-for="Nome" class="control-label">Nome Completo</label>
-                                <input asp-for="Nome" class="input" />
+                            <div>
+                                <label asp-for="Nome">Nome Completo</label>
+                                <input asp-for="Nome" class="input" required/>
                                 <span asp-validation-for="Nome" class="text-danger"></span>
                             </div>
-                            <div class="form-group">
-                                <label asp-for="Genero" class="control-label">Gênero</label>
-                                <select asp-for="Genero" asp-items="@Html.GetEnumSelectList<Enums.Genero>()" class="select"></select>
+                            <div>
+                                <label asp-for="Genero">Gênero</label>
+                                <select asp-for="Genero" asp-items="@Html.GetEnumSelectList<Enums.Genero>()" class="input-select" required></select>
                                 <span asp-validation-for="Genero" class="text-danger"></span>
                             </div>
-                            <div class="form-group">
-                                <label asp-for="DataDeNascimento" class="control-label">Data de Nascimentop</label>
-                                <input asp-for="DataDeNascimento" class="input" />
+                            <div>
+                                <input asp-for="DataDeNascimento" class="input" required/>
                                 <span asp-validation-for="DataDeNascimento" class="text-danger"></span>
                             </div>
                             <div class="info-secundaria-cadastro">
                                 <h3>Contato:</h3>
-                                <div class="form-group">
-                                    <label asp-for="Telefone" class="control-label">Telefone</label>
-                                    <input asp-for="Telefone" class="input" />
+                                <div>
+                                    <label asp-for="Telefone">Telefone</label>
+                                    <input value="@Model.Telefone" id="telefone" class="input" data-val-required="Informe um número válido de telefone" required/>
                                     <span asp-validation-for="Telefone" class="text-danger"></span>
                                 </div>
-                                <div class="form-group">
-                                    <label asp-for="Email" class="control-label">Email</label>
-                                    <input asp-for="Email" class="input" />
+                                <div>
+                                    <label asp-for="Email">Email</label>
+                                    <input asp-for="Email" class="input" required/>
                                     <span asp-validation-for="Email" class="text-danger"></span>
                                 </div>
                             </div>
                             <div class="senha">
                                 <h3>Senha:</h3>
-                                <label asp-for="Senha" class="control-label"></label>
-                                <input asp-for="Senha" class="input" />
+                                <label asp-for="Senha">Senha</label>
+                                <input asp-for="Senha" class="input" required/>
                                 <span asp-validation-for="Senha" class="text-danger"></span>
                             </div>
-                            <div class="form-group">
-                                <label asp-for="Perfil" class="control-label"></label>
-                                <select asp-for="Perfil" class="select" asp-items="@Html.GetEnumSelectList<Enums.Perfil>()"></select>
+                            <div>
+                                <label asp-for="Perfil"></label>
+                                <select asp-for="Perfil" class="input-select" asp-items="@Html.GetEnumSelectList<Enums.Perfil>()" required></select>
                                 <span asp-validation-for="Perfil" class="text-danger"></span>
                             </div>
                             <div class="btn">
@@ -91,11 +90,11 @@
                             </div>
                         </div>
                     </form>
-                    <div class="imagem-cadastro">
-                        <img src="./Images/imagem_Cadastro.png">
-                    </div>
                 </div>
             </section>
+            <div class="imagem-cadastro">
+                <img src="/Images/imagem_tela_cadastro.png">
+            </div>
         </main>
     </div>
 </body>

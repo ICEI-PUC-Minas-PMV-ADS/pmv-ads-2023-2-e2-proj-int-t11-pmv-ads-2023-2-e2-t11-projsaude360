@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "wFGEjUno/5MXhjLvoMEROmt48p6OJsdgXC8HNxP1VYw=",
+  "Hash": "Pa2AE1sS77vG3Xizh0eatE92tHgRNi8GeUrQdOyMXD8=",
   "Source": "ProjetoSaude360",
   "BasePath": "_content/ProjetoSaude360",
   "Mode": "Default",
@@ -66,6 +66,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\Cadastro\\cadastro.css"
+    },
+    {
+      "Identity": "C:\\Users\\pedro\\source\\repos\\pmv-ads-2023-2-e2-proj-int-t11-pmv-ads-2023-2-e2-t11-projsaude360\\src\\ProjetoSaude360\\ProjetoSaude360\\ProjetoSaude360\\wwwroot\\css\\Cadastro\\edit.css",
+      "SourceId": "ProjetoSaude360",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\pedro\\source\\repos\\pmv-ads-2023-2-e2-proj-int-t11-pmv-ads-2023-2-e2-t11-projsaude360\\src\\ProjetoSaude360\\ProjetoSaude360\\ProjetoSaude360\\wwwroot\\",
+      "BasePath": "_content/ProjetoSaude360",
+      "RelativePath": "css/Cadastro/edit.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\Cadastro\\edit.css"
     },
     {
       "Identity": "C:\\Users\\pedro\\source\\repos\\pmv-ads-2023-2-e2-proj-int-t11-pmv-ads-2023-2-e2-t11-projsaude360\\src\\ProjetoSaude360\\ProjetoSaude360\\ProjetoSaude360\\wwwroot\\css\\Home\\index.css",
@@ -202,6 +219,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\imagem_Cadastro.png"
+    },
+    {
+      "Identity": "C:\\Users\\pedro\\source\\repos\\pmv-ads-2023-2-e2-proj-int-t11-pmv-ads-2023-2-e2-t11-projsaude360\\src\\ProjetoSaude360\\ProjetoSaude360\\ProjetoSaude360\\wwwroot\\Images\\imagem_tela_cadastro.png",
+      "SourceId": "ProjetoSaude360",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\pedro\\source\\repos\\pmv-ads-2023-2-e2-proj-int-t11-pmv-ads-2023-2-e2-t11-projsaude360\\src\\ProjetoSaude360\\ProjetoSaude360\\ProjetoSaude360\\wwwroot\\",
+      "BasePath": "_content/ProjetoSaude360",
+      "RelativePath": "Images/imagem_tela_cadastro.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\imagem_tela_cadastro.png"
     },
     {
       "Identity": "C:\\Users\\pedro\\source\\repos\\pmv-ads-2023-2-e2-proj-int-t11-pmv-ads-2023-2-e2-t11-projsaude360\\src\\ProjetoSaude360\\ProjetoSaude360\\ProjetoSaude360\\wwwroot\\Images\\imagen_TelaInicial.png",

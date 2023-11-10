@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using ProjetoSaude360.Models;
 
 namespace ProjetoSaude360.Controllers
@@ -12,6 +13,7 @@ namespace ProjetoSaude360.Controllers
     public class CadastrosController : Controller
     {
         private readonly ApplicationDbContext _context;
+        private Cadastro cadastroViewModel;
 
         public Enums.Genero Generos { get; set; }
 
@@ -22,7 +24,6 @@ namespace ProjetoSaude360.Controllers
             _context = context;
         }
 
-        // GET: Cadastros
         public async Task<IActionResult> Index()
         {
               return _context.Cadastros != null ? 
@@ -30,7 +31,6 @@ namespace ProjetoSaude360.Controllers
                           Problem("Entity set 'ApplicationDbContext.Cadastros'  is null.");
         }
 
-        // GET: Cadastros/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null || _context.Cadastros == null)
@@ -48,21 +48,19 @@ namespace ProjetoSaude360.Controllers
             return View(cadastro);
         }
 
-        // GET: Cadastros/Create
         public IActionResult Create()
         {
-            return View();
+            cadastroViewModel = new Cadastro();
+            return View(cadastroViewModel);
         }
 
-        // POST: Cadastros/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Nome,Senha,Genero,DataDeNascimento,Email,Telefone,Perfil")] Cadastro cadastro)
         {
             if (ModelState.IsValid)
             {
+                cadastro.Senha = BCrypt.Net.BCrypt.HashPassword(cadastro.Senha);
                 _context.Add(cadastro);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -70,7 +68,6 @@ namespace ProjetoSaude360.Controllers
             return View(cadastro);
         }
 
-        // GET: Cadastros/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null || _context.Cadastros == null)
@@ -86,9 +83,7 @@ namespace ProjetoSaude360.Controllers
             return View(cadastro);
         }
 
-        // POST: Cadastros/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Nome,Senha,Genero,DataDeNascimento,Email,Telefone,Perfil")] Cadastro cadastro)
@@ -102,6 +97,7 @@ namespace ProjetoSaude360.Controllers
             {
                 try
                 {
+                    cadastro.Senha = BCrypt.Net.BCrypt.HashPassword(cadastro.Senha);
                     _context.Update(cadastro);
                     await _context.SaveChangesAsync();
                 }
@@ -121,7 +117,6 @@ namespace ProjetoSaude360.Controllers
             return View(cadastro);
         }
 
-        // GET: Cadastros/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null || _context.Cadastros == null)
@@ -139,7 +134,6 @@ namespace ProjetoSaude360.Controllers
             return View(cadastro);
         }
 
-        // POST: Cadastros/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)

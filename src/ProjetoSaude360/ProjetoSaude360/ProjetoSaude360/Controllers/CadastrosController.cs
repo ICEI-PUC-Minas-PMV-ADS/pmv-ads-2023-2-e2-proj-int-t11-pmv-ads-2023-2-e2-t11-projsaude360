@@ -45,7 +45,7 @@ namespace ProjetoSaude360.Controllers
         public async Task<IActionResult> Login(Cadastro cadastro)
         {
             var data = await _context.Cadastros
-                .FindAsync(cadastro.Email);
+                .FindAsync(cadastro.Id);
 
             if (data == null)
             {
@@ -82,10 +82,17 @@ namespace ProjetoSaude360.Controllers
             }
             else
             {
-                ViewBag.Message = "Usuário ou senha inválidos";
+                ViewBag.Message = "Usuário ou senha inválidos";                                 
             }
 
-            return View();
+            return View(Index);
+        }
+
+        public async Task<IActionResult> Logout()
+        {
+            await HttpContext.SignOutAsync();
+
+            return RedirectToAction("Login", "Cadastros");
         }
 
         public async Task<IActionResult> Details(int? id)
@@ -136,7 +143,11 @@ namespace ProjetoSaude360.Controllers
             {
                 return NotFound();
             }
-            return View(cadastro);
+
+            _context.Add(cadastro);
+            await _context.SaveChangesAsync();
+
+            return View();
         }
 
         

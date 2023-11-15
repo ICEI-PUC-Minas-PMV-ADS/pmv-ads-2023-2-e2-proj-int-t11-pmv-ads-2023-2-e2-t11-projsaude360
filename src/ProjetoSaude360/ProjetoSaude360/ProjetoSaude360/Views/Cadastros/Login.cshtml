@@ -4,32 +4,87 @@
     Layout = null;
 }
 
-<h1>Login</h1>
+<!DOCTYPE html>
+<html lang="pt-br">
 
-<h4>Cadastro</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Login">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Email" class="control-label"></label>
-                <input asp-for="Email" class="form-control" />
-                <span asp-validation-for="Email" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Senha" class="control-label"></label>
-                <input asp-for="Senha" class="form-control" />
-                <span asp-validation-for="Senha" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
-        <h3>@ViewBag.Message</h3>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/Cadastro/Login/login.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <title>Login - Saude360</title>
+</head>
+
+<body>
+    <header class="cabecalho">
+        <input type="checkbox" id="chec">
+        <label for="chec">
+            <img class="menu" src="/Images/menu_barra.png" alt="Menu de navegação">
+        </label>
+        <nav class="navigation">
+            <ul class="opcoes">
+                <li><a href="https://localhost:7156">Início</a></li>
+                <li><a href="#">Perfil</a></li>
+                <li><a href="#">Tratamentos</a></li>
+                <li><a href="#">Medicamentos</a></li>
+                <li><a href="#">Ciclo Menstrual</a></li>
+            </ul>
+        </nav>
+        <img class="imagemLogo" src="/Images/Logo.png" alt="Logo da Saude360">
+
+        <ul class="navbar-nav">
+            @if (User.Identity.IsAuthenticated)
+            {
+                <li class="nav-item">
+                    Olá @User.Identity.Name <a class="nav-link text-dark" asp-area="" asp-controller="Cadastros" asp-action="Logout">Logout</a>
+                </li>
+            }
+            else
+            {
+                <li class="nav-item">
+                    <a class="nav-link text-dark" asp-area="" asp-controller="Cadastros" asp-action="Login">Login</a>
+                </li>
+            }
+        </ul>
+    </header>
+
+    <div class="separador">
+        <main class="conteudo">
+            <section class="form-container">
+                <div class="container">
+                    <h1 class="titulo-login">Faça login na sua conta para poder acompanhar a sua saúde de perto!</h1>
+                    <form asp-action="Login">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <div class="input-single">
+                            <label asp-for="Id" class="control-label">Id</label>
+                            <input asp-for="Id" class="input" />
+                            <span asp-validation-for="Id" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="Senha" class="control-label">Senha</label>
+                            <input asp-for="Senha" class="input" />
+                            <span asp-validation-for="Senha" class="text-danger"></span>
+                        </div>
+                        <div class="btn">
+                            <input type="submit" value="Login" class="btn btn-primary" />
+                        </div>
+                    </form>
+                    <h3>@ViewBag.Message</h3>
+                </div>
+                <div class="image-login">
+                    <img src="/Images/image-Login.png"/>
+                </div>
+            </section>
+        </main>
     </div>
-</div>
+
+</body>
+
+</html>
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }

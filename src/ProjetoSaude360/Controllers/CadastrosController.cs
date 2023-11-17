@@ -1,18 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Claims;
-using System.Threading.Tasks;
-using BCrypt.Net;
-using Microsoft.AspNetCore.Authentication;
-using Microsoft.AspNetCore.Components.Web;
-using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
-using Microsoft.IdentityModel.Tokens;
 using ProjetoSaude360.Models;
+using System.Security.Claims;
 
 namespace ProjetoSaude360.Controllers
 {
@@ -70,8 +60,10 @@ namespace ProjetoSaude360.Controllers
                 {
                     //Permite atualização das credenciais
                     AllowRefresh = true,
+
                     //Expira após 8horas de trabalho
                     ExpiresUtc = DateTime.UtcNow.ToLocalTime().AddHours(8),
+
                     //persiste nos cookies do navegador do usuário
                     IsPersistent = true
                 };
@@ -85,7 +77,7 @@ namespace ProjetoSaude360.Controllers
                 ViewBag.Message = "Usuário ou senha inválidos";                                 
             }
 
-            return View(Index);
+            return View();
         }
 
         public async Task<IActionResult> Logout()

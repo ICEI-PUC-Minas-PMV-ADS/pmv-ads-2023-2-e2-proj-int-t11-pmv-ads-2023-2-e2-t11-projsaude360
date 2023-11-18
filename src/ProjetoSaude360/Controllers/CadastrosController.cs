@@ -1,4 +1,17 @@
+<<<<<<< Updated upstream:src/ProjetoSaude360/Controllers/CadastrosController.cs
 ﻿using Microsoft.AspNetCore.Authentication;
+=======
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Security.Claims;
+using System.Threading.Tasks;
+using BCrypt.Net;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Components.Web;
+using Microsoft.AspNetCore.Identity;
+>>>>>>> Stashed changes:src/ProjetoSaude360/ProjetoSaude360/ProjetoSaude360/Controllers/CadastrosController.cs
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ProjetoSaude360.Models;
@@ -21,9 +34,9 @@ namespace ProjetoSaude360.Controllers
 
         public async Task<IActionResult> Index()
         {
-              return _context.Cadastros != null ? 
-                          View(await _context.Cadastros.ToListAsync()) :
-                          Problem("Entity set 'ApplicationDbContext.Cadastros'  is null.");
+            return _context.Cadastros != null ?
+                        View(await _context.Cadastros.ToListAsync()) :
+                        Problem("Entity set 'ApplicationDbContext.Cadastros'  is null.");
         }
 
         public IActionResult Login()
@@ -142,7 +155,6 @@ namespace ProjetoSaude360.Controllers
             return View();
         }
 
-        
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Nome,Senha,Genero,DataDeNascimento,Email,Telefone,Perfil")] Cadastro cadastro)

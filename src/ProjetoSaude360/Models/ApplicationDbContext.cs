@@ -17,7 +17,6 @@ namespace ProjetoSaude360.Models
 
         public DbSet<Medicamento> Medicamentos { get; set; }
 
-
     }
 
 

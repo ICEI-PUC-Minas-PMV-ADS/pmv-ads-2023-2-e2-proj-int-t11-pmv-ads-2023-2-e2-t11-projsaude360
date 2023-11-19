@@ -1,4 +1,7 @@
-﻿namespace ProjetoSaude360.Models
+﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
+
+namespace ProjetoSaude360.Models
 {
     public class Enums
     {
@@ -12,6 +15,30 @@
         {
             Admin,
             User
+        }
+
+        public enum AdministracaoMed
+        {
+            Oral,
+            Retal,
+            Sublingual,
+            Nasal,    
+            Ocular,
+            Parental
+        }
+
+        public enum TipoTratamento
+        {
+            [Display(Name = "Tratamento Hormonal")]
+            Hormonal,
+            [Display(Name = "Tratamento para dor")]
+            Dor,
+            [Display(Name = "Depressão")]
+            Depressao,
+            [Display(Name = "Pressão Alta")]
+            PressaoAlta,
+            [Display(Name = "Controle de Glicemia")]
+            Diabetes,
         }
     }
 }

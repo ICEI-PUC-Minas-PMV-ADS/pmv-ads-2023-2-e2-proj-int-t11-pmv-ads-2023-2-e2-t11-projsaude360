@@ -1,21 +1,9 @@
-<<<<<<< Updated upstream:src/ProjetoSaude360/Controllers/CadastrosController.cs
-﻿using Microsoft.AspNetCore.Authentication;
-=======
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Claims;
-using System.Threading.Tasks;
-using BCrypt.Net;
 using Microsoft.AspNetCore.Authentication;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Components.Web;
-using Microsoft.AspNetCore.Identity;
->>>>>>> Stashed changes:src/ProjetoSaude360/ProjetoSaude360/ProjetoSaude360/Controllers/CadastrosController.cs
+using System.Security.Claims;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ProjetoSaude360.Models;
-using System.Security.Claims;
+
 
 namespace ProjetoSaude360.Controllers
 {
@@ -87,10 +75,10 @@ namespace ProjetoSaude360.Controllers
             }
             else
             {
-                ViewBag.Message = "Usuário ou senha inválidos";                                 
+                ViewBag.Message = "Usuário ou senha inválidos";
             }
 
-            return View();
+            return RedirectToAction("Index", "Home");
         }
 
         public async Task<IActionResult> Logout()
@@ -218,14 +206,14 @@ namespace ProjetoSaude360.Controllers
             {
                 _context.Cadastros.Remove(cadastro);
             }
-            
+
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool CadastroExists(int id)
         {
-          return (_context.Cadastros?.Any(e => e.Id == id)).GetValueOrDefault();
+            return (_context.Cadastros?.Any(e => e.Id == id)).GetValueOrDefault();
         }
     }
 }

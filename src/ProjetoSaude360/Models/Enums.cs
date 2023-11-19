@@ -1,15 +1,11 @@
-<<<<<<< HEAD
-﻿namespace ProjetoSaude360.Models
-=======
-﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
 namespace ProjetoSaude360.Models
->>>>>>> feature-Login
 {
     public class Enums
     {
-        public enum Genero { 
+        public enum Genero
+        {
             Masculino,
             Feminino,
             Outros
@@ -20,15 +16,13 @@ namespace ProjetoSaude360.Models
             Admin,
             User
         }
-<<<<<<< HEAD
-=======
 
         public enum AdministracaoMed
         {
             Oral,
             Retal,
             Sublingual,
-            Nasal,    
+            Nasal,
             Ocular,
             Parental
         }
@@ -46,6 +40,5 @@ namespace ProjetoSaude360.Models
             [Display(Name = "Controle de Glicemia")]
             Diabetes,
         }
->>>>>>> feature-Login
     }
 }

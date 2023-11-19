@@ -107,7 +107,7 @@ label {
 }
 
 .separador {
-    margin-top: 30px;
+    margin-top: 10px;
     margin-left: 70px;
     margin-right: 70px;
     border-top: 0.04rem solid #6f6c6c38;
@@ -220,3 +220,26 @@ label {
         justify-content: space-around;
     }
 }
+
+.cabecalho ul {
+    margin-top: 30px;
+    margin-right: 50px;
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: row;
+    font-family: 'Righteous', cursive;
+    color: black;
+    font-size: 15px;
+    justify-content: space-between;
+}
+
+    .nav-item a {
+        height: 15px;
+        width: 80px;
+        text-align: center;
+        background-color: #909090;
+
+    }
+    

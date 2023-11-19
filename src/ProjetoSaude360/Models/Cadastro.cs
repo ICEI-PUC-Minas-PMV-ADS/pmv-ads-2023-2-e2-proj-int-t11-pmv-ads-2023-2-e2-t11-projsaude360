@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ProjetoSaude360.Models
 {
-    [Table ("Usuarios")]
+    [Table ("Cadastros")]
     public class Cadastro
     {
         [Key]
@@ -30,7 +30,12 @@ namespace ProjetoSaude360.Models
         public int Telefone { get; set; }
 
         public Enums.Perfil Perfil { get; set; }
-    }
 
+
+        //TRATAMENTOS
+        public ICollection<Tratamento> Tratamentos {  get; set; }
     
+        //CONSULTAS
+        public ICollection<Consulta> Consultas { get; set; }
+    }
 }

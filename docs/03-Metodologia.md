@@ -73,3 +73,108 @@ O quadro scrum referente a Sprint 2, está representado abaixo no Jira conforme 
 
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t11-pmv-ads-2023-2-e2-t11-projsaude360/assets/125780065/135c3e48-3ae2-43f2-994b-c06015a4ff1b)
 
+# Sprint 3
+## Desenvolvimento da solução - Fase 1
+
+### Tarefas 
+<p>Para as tasks dessa sprint, as tarefas foram atribuidas conforme abaixo:</p>
+<table>
+   <tbody>
+        <tr>
+            <th>Tela- Home Page</th>
+            <th>Pedro Henrique</th>
+        </tr>
+     </tbody>
+     <tbody>
+        <tr>
+            <th>Tela - Login</th>
+            <th>Lucas Gonçalves </th>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+            <th>Tela de Cadastro</th>
+            <th>Bruno Alves</th>
+        </tr>
+       </tbody>
+      <tbody>
+        <tr>
+         <th>Testes de Usabilidade</th>
+         <th>Pedro Henrique</th>
+        </tr>
+      </tbody>
+     
+</table>       
+
+# Sprint 4
+## Desenvolvimento da solução - Fase 2
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t11-pmv-ads-2023-2-e2-t11-projsaude360/assets/125780065/f0223c33-e988-4562-80f5-b6a6bdfdc840)
+
+### Tarefas 
+<p>Para as tasks dessa sprint, as tarefas foram atribuidas conforme abaixo:</p>
+<table>
+   <tbody>
+        <tr>
+            <th>Tela- Perfil </th>
+            <th>Pedro Henrique</th>
+        </tr>
+     </tbody>
+     <tbody>
+        <tr>
+            <th>Tela - Consultas</th>
+            <th>Láisa Liane </th>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+            <th>Tela Novas Consultas</th>
+            <th>Láisa Liane</th>
+        </tr>
+       </tbody>
+      <tbody>
+        <tr>
+         <th>Tela de Tratamentos</th>
+         <th>Bruno Alves</th>
+        </tr>
+      </tbody>
+     <tbody>
+        <tr>
+         <th>Tela de Adicionar Tratamentos</th>
+         <th>Bruno Alves</th>
+        </tr>
+      </tbody>
+     <tbody>
+        <tr>
+         <th>Tela de Medicamentos</th>
+         <th>Maria Julia</th>
+        </tr>
+      </tbody>
+     <tbody>
+        <tr>
+         <th>Tela de Adicionar Medicamentos</th>
+         <th>Maria Julia</th>
+        </tr>
+      </tbody>
+     <tbody>
+        <tr>
+         <th>Tela de Edição de Perfil</th>
+         <th>Lucas Gonçalves</th>
+        </tr>
+      </tbody>
+       <tbody>
+        <tr>
+         <th>Testes de Usabilidade</th>
+         <th>Pedro Henrique</th>
+        </tr>
+      </tbody>
+        <tbody>
+        <tr>
+         <th>Testes de Software</th>
+         <th>Pedro Henrique</th>
+        </tr>
+      </tbody>
+     
+</table>       
+
+

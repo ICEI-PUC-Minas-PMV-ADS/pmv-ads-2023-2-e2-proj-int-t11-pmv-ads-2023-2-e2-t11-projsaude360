@@ -2,11 +2,53 @@
 
 <span style="color:red">Pré-requisitos: <a href="3-Projeto de Interface.md"> Projeto de Interface</a></span>, <a href="8-Plano de Testes de Software.md"> Plano de Testes de Software</a>
 
-Para cada caso de teste definido no Plano de Testes de Software, realize o registro das evidências dos testes feitos na aplicação pela equipe, que comprovem que o critério de êxito foi alcançado (ou não!!!). Para isso, utilize uma ferramenta de captura de tela que mostre cada um dos casos de teste definidos (obs.: cada caso de teste deverá possuir um vídeo do tipo _screencast_ para caracterizar uma evidência do referido caso).
+<h3>Relatório com as evidências dos testes de software realizados no sistema pelo time.</h3>
 
-## Avaliação
+|    Caso de Teste    |                                                                   CT-01 – Tela de Cadastro                                                                |
+| :-----------------: | :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+|       Imagem        | colocar a imagem relacionada |
+| Requisito Associado |                          RF-05 - O usuário será capaz de criar seu cadastro e realizar login utilizando e-mail, telefone e senha. O perfil será personalizado de acordo com os desejos do usuário.                           |
+|      Avaliação      |                                                                               ✅ Cadastro realizado com êxito                                                                     |                                                                                                           
 
-Discorra sobre os resultados do teste. Ressaltando pontos fortes e fracos identificados na solução. Comente como o grupo pretende atacar esses pontos nas próximas iterações. Apresente as falhas detectadas e as melhorias geradas a partir dos resultados obtidos nos testes.
+|    Caso de Teste    |                                                                   CT-02 – Login                                                              |
+| :-----------------: | :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+|       Imagem        | colocar a imagem relacionada  |
+| Requisito Associado |                          RF-06- O usuário deve conseguir realizar login informando e-mail e senha                          |
+|      Avaliação      |                                                                               ✅ Login realizado com sucesso                              
 
-> **Links Úteis**:
-> - [Ferramentas de Test para Java Script](https://geekflare.com/javascript-unit-testing/)
+|    Caso de Teste    |                                                                   CT-03 – Teste de comportamento para cadastro dos medicamentos   |
+| :-----------------: | :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+|       Imagem        | colocar a imagem relacionada |
+| Requisito Associado |                          RF-01 e RF- 03 - Registro de Dados de Saúde: Os usuários poderão inserir dados relacionados à saúde, como atividade física, ingestão de alimentos, padrões de sono, ciclo menstrual, feedbacks de consultas médicas; Personalização: A plataforma deve permitir que o usuário otimize o seu perfil de acordo com suas preferências;                         |
+|      Avaliação      |                                                                               ✅ Cadastro de Medicamento realizado com êxito                                                                                                                                
+
+|    Caso de Teste    |                                                                   CT-04 – Teste de comportamento para consulta dos medicamentos|
+| :-----------------: | :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+|       Imagem        | colocar a imagem relacionada |
+| Requisito Associado |                          RF-01 e RF- 03 - Registro de Dados de Saúde: Os usuários poderão inserir dados relacionados à saúde, como atividade física, ingestão de alimentos, padrões de sono, ciclo menstrual, feedbacks de consultas médicas; Personalização: A plataforma deve permitir que o usuário otimize o seu perfil de acordo com suas preferências;                            |
+|      Avaliação      |                                                                               ✅ Consulta dos medicamentos funciona corretamente                                                                                                                     
+
+|    Caso de Teste    |                                                                  CT-05 – Teste de comportamento para Cadastro dos tratamentos   |
+| :-----------------: | :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+|       Imagem        | colocar a imagem relacionada |
+| Requisito Associado |                          RF-01 e RF- 03 - Registro de Dados de Saúde: Os usuários poderão inserir dados relacionados à saúde, como atividade física, ingestão de alimentos, padrões de sono, ciclo menstrual, feedbacks de consultas médicas; Personalização: A plataforma deve permitir que o usuário otimize o seu perfil de acordo com suas preferências;                         |
+|      Avaliação      |                                                                               ✅ Cadastro de Tratamento realizado com êxito                                                                                                                                
+
+|    Caso de Teste    |                                                                   CT-06 – Teste de comportamento para consulta dos Tratamentos |
+| :-----------------: | :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+|       Imagem        | colocar a imagem relacionada |
+| Requisito Associado |                          RF-01 e RF- 03 - Registro de Dados de Saúde: Os usuários poderão inserir dados relacionados à saúde, como atividade física, ingestão de alimentos, padrões de sono, ciclo menstrual, feedbacks de consultas médicas; Personalização: A plataforma deve permitir que o usuário otimize o seu perfil de acordo com suas preferências;                            |
+|      Avaliação      |                                                                               ✅ Consulta dos tratamentos funciona corretamente           
+
+|    Caso de Teste    |                                                                  CT-07 – Teste de comportamento para Cadastro das Consultas  |
+| :-----------------: | :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+|       Imagem        | colocar a imagem relacionada |
+| Requisito Associado |                          RF-01 e RF- 03 - Registro de Dados de Saúde: Os usuários poderão inserir dados relacionados à saúde, como atividade física, ingestão de alimentos, padrões de sono, ciclo menstrual, feedbacks de consultas médicas; Personalização: A plataforma deve permitir que o usuário otimize o seu perfil de acordo com suas preferências;                         |
+|      Avaliação      |                                                                               ✅ Cadastro das Consultas realizado com êxito                                                                                                                                
+
+|    Caso de Teste    |                                                                   CT-08 – Teste de comportamento para averiguar as Consultas |
+| :-----------------: | :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+|       Imagem        | colocar a imagem relacionada |
+| Requisito Associado |                          RF-01 e RF- 03 - Registro de Dados de Saúde: Os usuários poderão inserir dados relacionados à saúde, como atividade física, ingestão de alimentos, padrões de sono, ciclo menstrual, feedbacks de consultas médicas; Personalização: A plataforma deve permitir que o usuário otimize o seu perfil de acordo com suas preferências;                            |
+|      Avaliação      |                                                                               ✅ Consulta da tela de consultas funciona corretamente               
+

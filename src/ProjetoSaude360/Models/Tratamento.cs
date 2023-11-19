@@ -15,13 +15,11 @@ namespace ProjetoSaude360.Models
 
         public DateTime DataTermino { get; set; }
 
-        public string TratamentoObs { get; set; }
+        public string Obs { get; set; }
 
-        public Enums.AdministracaoMed Administracao { get; set; }                   
+        public Enums.AdministracaoMed Administracao { get; set; }                           
 
         public Enums.TipoTratamento Tipo { get; set; }                                           
-
-        public Medicamento NomeMedicamento { get; set; }
 
         //Cadastro
         public Cadastro Cadastro { get; set; }

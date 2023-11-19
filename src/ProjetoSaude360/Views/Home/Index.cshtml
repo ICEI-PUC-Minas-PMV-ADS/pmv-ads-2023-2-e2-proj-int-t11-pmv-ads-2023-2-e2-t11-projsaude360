@@ -82,7 +82,11 @@
                         Ordenação e acompanhamento de consultas.
                     </p>
                     <div class="div-btn-cadastro">
-                        <button class="botao-cadastro" href="https://localhost:7156/Cadastros/Create">Cadastre-se</button>
+                        @if (User.Identity.IsAuthenticated){}
+                        else
+                        {
+                            <button class="botao-cadastro" href="https://localhost:7156/Cadastros/Create">Cadastre-se</button>
+                        }
                     </div>
                 </section>
             </div>

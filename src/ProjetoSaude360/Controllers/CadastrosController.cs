@@ -1,18 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Claims;
-using System.Threading.Tasks;
-using BCrypt.Net;
 using Microsoft.AspNetCore.Authentication;
-using Microsoft.AspNetCore.Components.Web;
-using Microsoft.AspNetCore.Identity;
+using System.Security.Claims;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
-using Microsoft.IdentityModel.Tokens;
 using ProjetoSaude360.Models;
+
 
 namespace ProjetoSaude360.Controllers
 {
@@ -31,9 +22,9 @@ namespace ProjetoSaude360.Controllers
 
         public async Task<IActionResult> Index()
         {
-              return _context.Cadastros != null ? 
-                          View(await _context.Cadastros.ToListAsync()) :
-                          Problem("Entity set 'ApplicationDbContext.Cadastros'  is null.");
+            return _context.Cadastros != null ?
+                        View(await _context.Cadastros.ToListAsync()) :
+                        Problem("Entity set 'ApplicationDbContext.Cadastros'  is null.");
         }
 
         public IActionResult Login()
@@ -70,8 +61,10 @@ namespace ProjetoSaude360.Controllers
                 {
                     //Permite atualização das credenciais
                     AllowRefresh = true,
+
                     //Expira após 8horas de trabalho
                     ExpiresUtc = DateTime.UtcNow.ToLocalTime().AddHours(8),
+
                     //persiste nos cookies do navegador do usuário
                     IsPersistent = true
                 };
@@ -82,10 +75,10 @@ namespace ProjetoSaude360.Controllers
             }
             else
             {
-                ViewBag.Message = "Usuário ou senha inválidos";                                 
+                ViewBag.Message = "Usuário ou senha inválidos";
             }
 
-            return View(Index);
+            return RedirectToAction("Index", "Home");
         }
 
         public async Task<IActionResult> Logout()
@@ -150,7 +143,6 @@ namespace ProjetoSaude360.Controllers
             return View();
         }
 
-        
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Nome,Senha,Genero,DataDeNascimento,Email,Telefone,Perfil")] Cadastro cadastro)
@@ -214,14 +206,14 @@ namespace ProjetoSaude360.Controllers
             {
                 _context.Cadastros.Remove(cadastro);
             }
-            
+
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool CadastroExists(int id)
         {
-          return (_context.Cadastros?.Any(e => e.Id == id)).GetValueOrDefault();
+            return (_context.Cadastros?.Any(e => e.Id == id)).GetValueOrDefault();
         }
     }
 }

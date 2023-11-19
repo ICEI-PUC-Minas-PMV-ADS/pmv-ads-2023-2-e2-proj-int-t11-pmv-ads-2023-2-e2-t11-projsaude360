@@ -24,7 +24,6 @@ namespace ProjetoSaude360.Models
         //Cadastro
         public Cadastro Cadastro { get; set; }
 
-
         // Medicamentos
         public ICollection<Medicamento> Medicamentos { get; set; }
 

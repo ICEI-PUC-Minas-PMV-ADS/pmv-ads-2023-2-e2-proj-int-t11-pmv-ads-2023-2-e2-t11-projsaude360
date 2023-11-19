@@ -27,10 +27,9 @@ namespace ProjetoSaude360.Models
         public string Email { get; set; }
 
         [Required]
-        public int Telefone { get; set; }
+        public long Telefone { get; set; }
 
         public Enums.Perfil Perfil { get; set; }
-
 
         //TRATAMENTOS
         public ICollection<Tratamento> Tratamentos {  get; set; }

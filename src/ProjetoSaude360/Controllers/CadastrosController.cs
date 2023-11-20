@@ -27,6 +27,27 @@ namespace ProjetoSaude360.Controllers
                         Problem("Entity set 'ApplicationDbContext.Cadastros'  is null.");
         }
 
+        public IActionResult Perfil()
+        {
+            return View();
+        }
+
+        public async Task<IActionResult> Perfil(int id)
+        {
+            if (id == null || _context.Cadastros == null)
+            {
+                return NotFound();
+            }
+
+            var cadastro = await _context.Cadastros
+                .FirstOrDefaultAsync(m => m.Id == id);
+            if (cadastro == null)
+            {
+                return NotFound();
+            }
+            return View();
+        }
+
         public IActionResult Login()
         {
             return View();

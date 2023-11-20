@@ -1,0 +1,93 @@
+﻿@model ProjetoSaude360.Models.Cadastro
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Edição de Perfil</title>
+</head>
+
+<body>
+    <div class="header">
+        <header class="cabecalho">
+            <input type="checkbox" id="chec">
+            <label for="chec">
+                <img class="menu" src="./Images/menu_barra.png">
+            </label>
+            <nav class="navigation">
+                <ul class="opcoes">
+                    <li><a href="https://localhost:7156">Início</a></li>
+                    <li><a href="https://localhost:7156/Cadastros/Perfil&id=">Perfil</a></li>
+                    <li><a href="">Tratamentos</a></li>
+                    <li><a href="">Medicamentos</a></li>
+                    <li><a href="">Ciclo Menstrual</a></li>
+                </ul>
+            </nav>
+
+            <img class="imagemLogo" src="~/Images/Logo.png">
+
+            <ul class="navbar-nav">
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <li class="nav-item">
+                        Olá @User.Identity.Name <a class="nav-link text-dark" asp-area="" asp-controller="Cadastros" asp-action="Logout">Logout</a>
+                    </li>
+                }
+                else
+                {
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Cadastros" asp-action="Login">Login</a>
+                    </li>
+                }
+            </ul>
+        </header>
+    </div>
+    <div class="title-container">
+        <div class="title">Edição de Perfil</div>
+    </div>
+    <div class="container">
+        <div class="column">
+            <div class="profile-picture"></div>
+            <div class="form-group">
+                <input value="@Model.Nome" type="text" id="nome" name="nome" placeholder="Nome" />
+            </div>
+        </div>
+        <div class="column">
+            <div class="form-group">
+                <label for="age">Data de Nascimento:</label>
+                <input value="@Model.DataDeNascimento" type="text" id="age" name="age" placeholder="Idade" />
+            </div>
+            <div class="form-group">
+                <label for="gender">Gênero:</label>
+                <input value="@Model.Genero" type="text" id="gender" name="gender" placeholder="Gênero" />
+            </div>
+        </div>
+        <div class="column">
+            <div class="form-group">
+                <label for="phone">Telefone:</label>
+                <input type="text" id="phone" name="phone" placeholder="Telefone" />
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email" placeholder="Email" />
+            </div>
+        </div>
+    </div>
+    <div class="buttons">
+        <button class="edit-button">Editar</button>
+        <button class="cancel-button">Cancelar</button>
+    </div>
+</body>
+</html>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

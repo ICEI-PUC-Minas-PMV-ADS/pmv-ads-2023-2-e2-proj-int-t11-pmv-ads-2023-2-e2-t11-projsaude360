@@ -6,16 +6,6 @@ namespace ProjetoSaude360.Models
     [Table("Tratamentos")]
     public class Tratamento
     {
-        public Tratamento(double dosagem, DateTime dataInicio, DateTime dataTermino, string obs, Enums.AdministracaoMed administracao, Enums.TipoTratamento tipo)
-        {
-            Dosagem = dosagem;
-            DataInicio = dataInicio;
-            DataTermino = dataTermino;
-            Obs = obs;
-            Administracao = administracao;
-            Tipo = tipo;
-        }
-
         [Key]
         public int Id { get; set; }
 

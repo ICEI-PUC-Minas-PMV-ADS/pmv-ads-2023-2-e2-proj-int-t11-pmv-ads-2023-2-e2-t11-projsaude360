@@ -7,14 +7,6 @@ namespace ProjetoSaude360.Models
     [Table("Consultas")]
     public class Consulta
     {
-        public Consulta(string nomeMedico, string motivoConsulta, DateTime dataConsulta, string recomendacoes)
-        {
-            NomeMedico = nomeMedico;
-            MotivoConsulta = motivoConsulta;
-            DataConsulta = dataConsulta;
-            Recomendacoes = recomendacoes;
-        }
-
         [Key]
         public int Id { get; set; }
 

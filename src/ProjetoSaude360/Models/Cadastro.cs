@@ -6,17 +6,6 @@ namespace ProjetoSaude360.Models
     [Table ("Cadastros")]
     public class Cadastro
     {
-        public Cadastro(string nome, string senha, Enums.Genero genero, DateTime dataDeNascimento, string email, long telefone, Enums.Perfil perfil)
-        {
-            Nome = nome;
-            Senha = senha;
-            Genero = genero;
-            DataDeNascimento = dataDeNascimento;
-            Email = email;
-            Telefone = telefone;
-            Perfil = perfil;
-        }
-
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }

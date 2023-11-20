@@ -1,93 +1,63 @@
 ﻿@model ProjetoSaude360.Models.Cadastro
 
 @{
-    Layout = null;
+    ViewData["Title"] = "Perfil";
 }
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
-    <title>Edição de Perfil</title>
-</head>
+<h1>Perfil</h1>
 
-<body>
-    <div class="header">
-        <header class="cabecalho">
-            <input type="checkbox" id="chec">
-            <label for="chec">
-                <img class="menu" src="./Images/menu_barra.png">
-            </label>
-            <nav class="navigation">
-                <ul class="opcoes">
-                    <li><a href="https://localhost:7156">Início</a></li>
-                    <li><a href="https://localhost:7156/Cadastros/Perfil&id=">Perfil</a></li>
-                    <li><a href="">Tratamentos</a></li>
-                    <li><a href="">Medicamentos</a></li>
-                    <li><a href="">Ciclo Menstrual</a></li>
-                </ul>
-            </nav>
+<h4>Cadastro</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Perfil">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Nome" class="control-label"></label>
+                <input asp-for="Nome" class="form-control" />
+                <span asp-validation-for="Nome" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Senha" class="control-label"></label>
+                <input asp-for="Senha" class="form-control" />
+                <span asp-validation-for="Senha" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Genero" class="control-label"></label>
+                <select asp-for="Genero" class="form-control"></select>
+                <span asp-validation-for="Genero" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DataDeNascimento" class="control-label"></label>
+                <input asp-for="DataDeNascimento" class="form-control" />
+                <span asp-validation-for="DataDeNascimento" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Telefone" class="control-label"></label>
+                <input asp-for="Telefone" class="form-control" />
+                <span asp-validation-for="Telefone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Perfil" class="control-label"></label>
+                <select asp-for="Perfil" class="form-control"></select>
+                <span asp-validation-for="Perfil" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
 
-            <img class="imagemLogo" src="~/Images/Logo.png">
-
-            <ul class="navbar-nav">
-                @if (User.Identity.IsAuthenticated)
-                {
-                    <li class="nav-item">
-                        Olá @User.Identity.Name <a class="nav-link text-dark" asp-area="" asp-controller="Cadastros" asp-action="Logout">Logout</a>
-                    </li>
-                }
-                else
-                {
-                    <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Cadastros" asp-action="Login">Login</a>
-                    </li>
-                }
-            </ul>
-        </header>
-    </div>
-    <div class="title-container">
-        <div class="title">Edição de Perfil</div>
-    </div>
-    <div class="container">
-        <div class="column">
-            <div class="profile-picture"></div>
-            <div class="form-group">
-                <input value="@Model.Nome" type="text" id="nome" name="nome" placeholder="Nome" />
-            </div>
-        </div>
-        <div class="column">
-            <div class="form-group">
-                <label for="age">Data de Nascimento:</label>
-                <input value="@Model.DataDeNascimento" type="text" id="age" name="age" placeholder="Idade" />
-            </div>
-            <div class="form-group">
-                <label for="gender">Gênero:</label>
-                <input value="@Model.Genero" type="text" id="gender" name="gender" placeholder="Gênero" />
-            </div>
-        </div>
-        <div class="column">
-            <div class="form-group">
-                <label for="phone">Telefone:</label>
-                <input type="text" id="phone" name="phone" placeholder="Telefone" />
-            </div>
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="text" id="email" name="email" placeholder="Email" />
-            </div>
-        </div>
-    </div>
-    <div class="buttons">
-        <button class="edit-button">Editar</button>
-        <button class="cancel-button">Cancelar</button>
-    </div>
-</body>
-</html>
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
 
 @section Scripts {
-    @{
-        await Html.RenderPartialAsync("_ValidationScriptsPartial");
-    }
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }

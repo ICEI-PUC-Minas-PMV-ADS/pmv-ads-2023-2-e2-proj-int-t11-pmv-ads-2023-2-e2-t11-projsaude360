@@ -11,20 +11,19 @@ namespace ProjetoSaude360.Models
         public int Id { get; set; }
 
         [Display(Name = "Nome do Médico")]
-        public string NomeMedico { get; set; }
+        public string? NomeMedico { get; set; }
 
         [Display(Name = "Motivo da Consulta")]
-        public string MotivoConsulta { get; set; }
+        public string? MotivoConsulta { get; set; }
 
         [Display(Name = "Data da Consulta")]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:yyyy-MM-dd}")]
         public DateTime DataConsulta { get; set; }
 
         [Display(Name = "Recomendações")]
-        public string Recomendacoes { get; set; }
+        public string? Recomendacoes { get; set; }
 
         //Cadastros
-        public Cadastro Cadastros { get; set; }
-
-
+        public Cadastro? Cadastros { get; set; }
     }
 }

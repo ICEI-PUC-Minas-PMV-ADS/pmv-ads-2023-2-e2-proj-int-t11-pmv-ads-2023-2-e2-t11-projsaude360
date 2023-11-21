@@ -4,7 +4,6 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ProjetoSaude360.Models;
 
-
 namespace ProjetoSaude360.Controllers
 {
     public class CadastrosController : Controller

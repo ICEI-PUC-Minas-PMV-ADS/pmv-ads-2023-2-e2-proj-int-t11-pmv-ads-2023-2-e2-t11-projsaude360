@@ -9,23 +9,25 @@ namespace ProjetoSaude360.Models
         [Key]
         public int Id { get; set; }
 
-        public double Dosagem { get; set; }
+        public double? Dosagem { get; set; }
 
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:yyyy-MM-dd}")]
         public DateTime DataInicio { get; set; }
 
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:yyyy-MM-dd}")]
         public DateTime DataTermino { get; set; }
 
-        public string Obs { get; set; }
+        public string? Obs { get; set; }
 
-        public Enums.AdministracaoMed Administracao { get; set; }                           
+        public Enums.AdministracaoMed? Administracao { get; set; }                           
 
-        public Enums.TipoTratamento Tipo { get; set; }                                           
+        public Enums.TipoTratamento? Tipo { get; set; }                                           
 
         //Cadastro
-        public Cadastro Cadastro { get; set; }
+        public Cadastro? Cadastro { get; set; }
 
         // Medicamentos
-        public ICollection<Medicamento> Medicamentos { get; set; }
+        public ICollection<Medicamento>? Medicamentos { get; set; }
 
     }
 }

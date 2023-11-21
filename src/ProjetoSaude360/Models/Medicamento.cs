@@ -9,16 +9,16 @@ namespace ProjetoSaude360.Models
         [Key]
         public int Id { get; set; }
 
-        public string Nome { get; set; }
+        public string? Nome { get; set; }
 
-        public string Dosagem { get; set; }
+        public string? Dosagem { get; set; }
 
-        public string Obs { get; set; }
+        public string? Obs { get; set; }
 
 
-        public string Info{ get; set; }
+        public string? Info{ get; set; }
 
         //TRATAMENTOs
-        public Tratamento Tratamento { get; set; }
+        public Tratamento? Tratamento { get; set; }
     }
 }

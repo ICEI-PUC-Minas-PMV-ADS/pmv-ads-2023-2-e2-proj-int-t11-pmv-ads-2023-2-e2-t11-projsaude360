@@ -11,20 +11,21 @@ namespace ProjetoSaude360.Models
         public int Id { get; set; }
 
         [Required]
-        public string Nome { get; set; }
+        public string? Nome { get; set; }
 
         [Required]
         [DataType(DataType.Password)]
-        public string Senha { get; set; }
+        public string? Senha { get; set; }
 
         [Required]
         public Enums.Genero Genero { get; set; }
 
         [Required]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:yyyy-MM-dd}")]
         public DateTime DataDeNascimento { get; set; }
 
         [Required]
-        public string Email { get; set; }
+        public string? Email { get; set; }
 
         [Required]
         public long Telefone { get; set; }
@@ -32,9 +33,9 @@ namespace ProjetoSaude360.Models
         public Enums.Perfil Perfil { get; set; }
 
         //TRATAMENTOS
-        public ICollection<Tratamento> Tratamentos {  get; set; }
+        public ICollection<Tratamento>? Tratamentos {  get; set; }
     
         //CONSULTAS
-        public ICollection<Consulta> Consultas { get; set; }
+        public ICollection<Consulta>? Consultas { get; set; }
     }
 }

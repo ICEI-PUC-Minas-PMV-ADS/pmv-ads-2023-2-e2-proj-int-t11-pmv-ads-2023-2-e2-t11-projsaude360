@@ -4,7 +4,6 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ProjetoSaude360.Models;
 
-
 namespace ProjetoSaude360.Controllers
 {
     public class CadastrosController : Controller
@@ -25,6 +24,27 @@ namespace ProjetoSaude360.Controllers
             return _context.Cadastros != null ?
                         View(await _context.Cadastros.ToListAsync()) :
                         Problem("Entity set 'ApplicationDbContext.Cadastros'  is null.");
+        }
+
+        public IActionResult PerfilUsuario()
+        {
+            return View();
+        }
+
+        public async Task<IActionResult> PerfilUsuario(int id)
+        {
+            if (id == null || _context.Cadastros == null)
+            {
+                return NotFound();
+            }
+
+            var cadastro = await _context.Cadastros
+                .FirstOrDefaultAsync(m => m.Id == id);
+            if (cadastro == null)
+            {
+                return NotFound();
+            }
+            return View();
         }
 
         public IActionResult Login()

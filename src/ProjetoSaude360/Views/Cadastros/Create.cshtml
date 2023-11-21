@@ -32,9 +32,20 @@
             </ul>
         </nav>
         <img class="imagemLogo" src="~/Images/Logo.png">
-        <div class="login">
-            <button class="botaoLogin" href="Cadastro.html">Entrar</button>
-        </div>
+        <ul class="navbar-nav">
+            @if (User.Identity.IsAuthenticated)
+            {
+                <li class="nav-item">
+                    Olá @User.Identity.Name <a class="nav-link text-dark" asp-area="" asp-controller="Cadastros" asp-action="Logout">Logout</a>
+                </li>
+            }
+            else
+            {
+                <li class="nav-item">
+                    <a class="nav-link text-dark" asp-area="" asp-controller="Cadastros" asp-action="Login">Login</a>
+                </li>
+            }
+        </ul>
     </header>
 
     <div class="separador">
@@ -65,7 +76,7 @@
                                 <h3>Contato:</h3>
                                 <div>
                                     <label asp-for="Telefone">Telefone</label>
-                                    <input id="telefone" class="input" data-val-required="Informe um número válido de telefone" required/>
+                                    <input asp-for="Telefone" class="input" data-val-required="Informe um número válido de telefone" required/>
                                     <span asp-validation-for="Telefone" class="text-danger"></span>
                                 </div>
                                 <div>

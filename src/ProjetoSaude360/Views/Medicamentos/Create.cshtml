@@ -1,0 +1,116 @@
+﻿@model ProjetoSaude360.Models.Medicamento
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/Medicamentos/medicamentos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <title>Saude360</title>
+</head>
+
+<body>
+    <header class="cabecalho">
+        <input type="checkbox" id="chec">
+        <label for="chec">
+            <img class="menu" src="./imagem/menu_barra.png">
+        </label>
+        <nav class="navigation">
+            <ul class="opcoes">
+                <li><a href="Index.html">Início</a></li>
+                <li><a href="">Perfil</a></li>
+                <li><a href="">Tratamentos</a></li>
+                <li><a href="">Medicamentos</a></li>
+                <li><a href="">Ciclo Menstrual</a></li>
+            </ul>
+        </nav>
+        <ul class="navbar-nav">
+            @if (User.Identity.IsAuthenticated)
+            {
+                <li class="nav-item">
+                    Olá @User.Identity.Name <a class="nav-link text-dark" asp-area="" asp-controller="Cadastros" asp-action="Logout">Logout</a>
+                </li>
+            }
+            else
+            {
+                <li class="nav-item">
+                    <a class="nav-link text-dark" asp-area="" asp-controller="Cadastros" asp-action="Login">Login</a>
+                </li>
+            }
+        </ul>
+    </header>
+
+    <div class="separador">
+        <main class="conteudo">
+            <section class="form-container">
+                <div class="container">
+                    <form asp-action="Create">
+                        <h1 class="titulo-login">Meus medicamentos</h1>
+                        <div class="input-single">
+                            <div>
+                               
+
+                            </div>
+
+                            <div class="add">
+                                <h2>Adicionar novo:</h2>
+                                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                                <div>
+                                    <p>Nome do medicamento:</p>
+                                    <input asp-for="Nome" class="form-control" />
+                                    <span asp-validation-for="Nome" class="text-danger"></span>
+                                </div>
+                                <div>
+                                    <p>Informações sobre:</p>
+                                    <input asp-for="Info" class="form-control" />
+                                    <span asp-validation-for="Info" class="text-danger"></span>
+                                </div>
+                                <div>
+                                    <p>Dosagem:</p>
+                                    <input asp-for="Dosagem" class="form-control" />
+                                    <span asp-validation-for="Dosagem" class="text-danger"></span>
+                                </div>
+                                <div>
+                                    <p>Observações:</p>
+                                    <input asp-for="Obs" class="form-control" />
+                                    <span asp-validation-for="Obs" class="text-danger"></span>
+                                </div>
+                                <input class="butom" type="submit" value="Create" id="image" src="./imagem1/mais 2.png" />
+                            </div>
+
+                            <img class="barraV" src="./imagem1/Line 35.png">
+                        </div>
+                    </form>
+                </div>
+            </section>
+            <div class="imagem-cadastro">
+            </div>
+        </main>
+    </div>
+
+
+</body>
+
+</html>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+
+
+
+
+
+
+
+

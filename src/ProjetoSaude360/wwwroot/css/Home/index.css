@@ -113,6 +113,7 @@ label {
     border-top: 0.04rem solid #6f6c6c38;
 }
 
+
 .conteudo {
     margin-top: 150px;
     margin-bottom: 2rem;
@@ -233,6 +234,7 @@ label {
     font-size: 15px;
     justify-content: space-between;
 }
+
     .nav-item a {
         height: 15px;
         width: 80px;

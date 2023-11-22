@@ -6,7 +6,8 @@
 
 |    Caso de Teste    |                                                                   CT-01 – Tela de Cadastro                                                                |
 | :-----------------: | :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-|       Imagem        | colocar a imagem relacionada |
+|       Imagem        |![Teste Cadastro](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t11-pmv-ads-2023-2-e2-t11-projsaude360/assets/112480812/4e817a4d-effb-4a6a-ac3c-acc056896b82)
+ relacionada |
 | Requisito Associado |                          RF-05 - O usuário será capaz de criar seu cadastro e realizar login utilizando e-mail, telefone e senha. O perfil será personalizado de acordo com os desejos do usuário.                           |
 |      Avaliação      |                                                                               ✅ Cadastro realizado com êxito                                                                     |                                                                                                           
 

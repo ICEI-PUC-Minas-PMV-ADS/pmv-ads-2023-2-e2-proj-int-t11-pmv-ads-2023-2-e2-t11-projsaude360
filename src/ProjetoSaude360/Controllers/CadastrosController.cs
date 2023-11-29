@@ -3,9 +3,11 @@ using System.Security.Claims;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ProjetoSaude360.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ProjetoSaude360.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class CadastrosController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -26,11 +28,13 @@ namespace ProjetoSaude360.Controllers
                         Problem("Entity set 'ApplicationDbContext.Cadastros'  is null.");
         }
 
+        [AllowAnonymous]
         public IActionResult PerfilUsuario()
         {
             return View();
         }
 
+        [AllowAnonymous]
         public async Task<IActionResult> PerfilUsuario(int id)
         {
             if (id == null || _context.Cadastros == null)
@@ -47,12 +51,14 @@ namespace ProjetoSaude360.Controllers
             return View();
         }
 
+        [AllowAnonymous]
         public IActionResult Login()
         {
             return View();
         }
 
         [HttpPost]
+        [AllowAnonymous]
         public async Task<IActionResult> Login(Cadastro cadastro)
         {
             var data = await _context.Cadastros
@@ -101,6 +107,7 @@ namespace ProjetoSaude360.Controllers
             return RedirectToAction("Index", "Home");
         }
 
+        [AllowAnonymous]
         public async Task<IActionResult> Logout()
         {
             await HttpContext.SignOutAsync();
@@ -125,6 +132,7 @@ namespace ProjetoSaude360.Controllers
             return View(cadastro);
         }
 
+        [AllowAnonymous]
         public IActionResult Create()
         {
             return View();
@@ -132,6 +140,7 @@ namespace ProjetoSaude360.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [AllowAnonymous]
         public async Task<IActionResult> Create([Bind("Id,Nome,Senha,Genero,DataDeNascimento,Email,Telefone,Perfil")] Cadastro cadastro)
         {
             if (ModelState.IsValid)
@@ -144,6 +153,7 @@ namespace ProjetoSaude360.Controllers
             return View(cadastro);
         }
 
+        [AllowAnonymous]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null || _context.Cadastros == null)

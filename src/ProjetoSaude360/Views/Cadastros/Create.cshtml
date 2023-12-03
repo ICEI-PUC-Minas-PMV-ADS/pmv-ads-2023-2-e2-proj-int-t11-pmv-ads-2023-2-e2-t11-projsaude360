@@ -20,7 +20,7 @@
     <header class="cabecalho">
         <input type="checkbox" id="chec">
         <label for="chec">
-            <img class="menu" src="./Images/menu_barra.png">
+            <img class="menu" src="~/Images/menu_barra.png">
         </label>
         <nav class="navigation">
             <ul class="opcoes">
@@ -59,14 +59,16 @@
                         <div class="input-single">
                             <h2>Informações Pessoais:</h2>
                             <div>
-                                <label asp-for="Nome" class="">Nome Completo</label>
-                                <input asp-for="Nome" class="input" required/>
+                                <label asp-for="Nome" class="sr-only">Nome Completo</label>
+                                <input asp-for="Nome" class="input" required placeholder="Nome Completo" />
                                 <span asp-validation-for="Nome" class="text-danger"></span>
                             </div>
                             <div>
-                                <label asp-for="Genero">Gênero</label>
-                                <select asp-for="Genero" asp-items="@Html.GetEnumSelectList<Enums.Genero>()" class="input-select" required></select>
-                                <span asp-validation-for="Genero" class="text-danger"></span>
+                                <label asp-for="Genero" class="sr-only">Gênero</label>
+                                <select asp-for="Genero" asp-items="@Html.GetEnumSelectList<Enums.Genero>()" class="input-select" required>
+                                <option value="">Selecione</option>
+                                </select>
+                                    <span asp-validation-for="Genero" class="text-danger"></span>
                             </div>
                             <div>
                                 <input asp-for="DataDeNascimento" class="input" required/>
@@ -75,25 +77,27 @@
                             <div class="info-secundaria-cadastro">
                                 <h3>Contato:</h3>
                                 <div>
-                                    <label asp-for="Telefone">Telefone</label>
-                                    <input asp-for="Telefone" class="input" data-val-required="Informe um número válido de telefone" required/>
+                                    <label asp-for="Telefone" class="sr-only">Telefone</label>
+                                    <input asp-for="Telefone" class="input" data-val-required="Informe um número válido de telefone" required placeholder="Telefone" />
                                     <span asp-validation-for="Telefone" class="text-danger"></span>
                                 </div>
                                 <div>
-                                    <label asp-for="Email">Email</label>
-                                    <input asp-for="Email" class="input" required/>
+                                    <label asp-for="Email" class="sr-only">Email</label>
+                                    <input asp-for="Email" class="input" required placeholder="Email"/>
                                     <span asp-validation-for="Email" class="text-danger"></span>
                                 </div>
                             </div>
-                            <div class="senha">
+                            <<div class="senha">
                                 <h3>Senha:</h3>
-                                <label asp-for="Senha">Senha</label>
-                                <input asp-for="Senha" class="input" required/>
+                                <label asp-for="Senha" class="sr-only">Senha</label>
+                                <input asp-for="Senha" class="input" required placeholder="Senha" />
                                 <span asp-validation-for="Senha" class="text-danger"></span>
                             </div>
                             <div>
-                                <label asp-for="Perfil"></label>
-                                <select asp-for="Perfil" class="input-select" asp-items="@Html.GetEnumSelectList<Enums.Perfil>()" required></select>
+                                <label asp-for="Perfil" class="sr-only">Perfil</label>
+                                <select asp-for="Perfil" class="input-select" asp-items="@Html.GetEnumSelectList<Enums.Perfil>()" required>
+                                    <option value="">Selecione</option>
+                                </select>
                                 <span asp-validation-for="Perfil" class="text-danger"></span>
                             </div>
                             <div class="btn">

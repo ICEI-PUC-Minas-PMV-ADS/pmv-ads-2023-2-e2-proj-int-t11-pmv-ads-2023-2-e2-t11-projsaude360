@@ -1,5 +1,9 @@
 ﻿@model ProjetoSaude360.Models.Medicamento
 
+@{
+    Layout = null;
+}
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -51,20 +55,19 @@
                         <h1 class="titulo-login">Meus medicamentos</h1>
                         <div class="input-single">
                             <div>
-                                @if (Model.MedicamentosExistentes != null)
+                                @if (Model != null && Model.MedicamentosExistentes != null)
                                 {
                                     @foreach (var medicamento in Model.MedicamentosExistentes)
                                     {
-                                        <label>@medicamento.Nome</label>
-                                        <button onclick="excluirMedicamento(@medicamento.Id)">X</button>
+                                        <label value="@Model.Nome" class="label-nome-medicamento">@medicamento.Nome</label>
+                                        <button class="btn-excluir-medicamento" onclick="excluirMedicamento(@medicamento.Id)">X</button>
                                         <br />
                                     }
                                 }
                                 else
                                 {
-                                    
+                                    <p>Nenhum medicamento existente.</p>
                                 }
-
                             </div>
 
                             <div class="add">
@@ -88,7 +91,7 @@
                                 </div>
                                 <div>
                                     <p>Observações:</p>
-                                    <textarea asp-for="Obs" class="form-control" />
+                                    <textarea asp-for="Obs" class="form-control"></textarea>
                                     <span asp-validation-for="Obs" class="text-danger"></span>
                                 </div>
                                 <input class="butom" type="submit" value="Create" />

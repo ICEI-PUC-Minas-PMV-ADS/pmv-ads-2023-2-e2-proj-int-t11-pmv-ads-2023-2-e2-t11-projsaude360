@@ -37,5 +37,8 @@ namespace ProjetoSaude360.Models
     
         //CONSULTAS
         public ICollection<Consulta>? Consultas { get; set; }
+
+        //Medicamentos 
+        public ICollection<Medicamento>? Medicamentos { get; set; }
     }
 }

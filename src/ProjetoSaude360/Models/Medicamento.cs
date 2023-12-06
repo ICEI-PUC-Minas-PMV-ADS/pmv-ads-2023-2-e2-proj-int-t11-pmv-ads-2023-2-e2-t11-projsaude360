@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using ProjetoSaude360.Controllers;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ProjetoSaude360.Models
@@ -21,5 +22,8 @@ namespace ProjetoSaude360.Models
         //TRATAMENTOs
         public Tratamento? Tratamento { get; set; }
         public List<Medicamento> MedicamentosExistentes { get; internal set; }
+
+        //Cadastros
+        public Cadastro Cadastros { get; set; }
     }
 }

@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ProjetoSaude360.Models;
 
-namespace SeuProjeto.Testes
+namespace ProjetoSaude360.Testes
 {
     [TestFixture]
     public class MedicamentoAdicionaControllerTestes

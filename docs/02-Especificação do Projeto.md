@@ -10,7 +10,7 @@ O detalhamento das personas e histórias de usuário está apresentado na tabela
 ## Histórias de Usuários
 
 Com base na análise das personas forma identificadas as seguintes histórias de usuários:
-![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t11-pmv-ads-2023-2-e2-t11-projsaude360/assets/127440373/30742902-7784-4407-be99-b17c1fd054eb)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t11-pmv-ads-2023-2-e2-t11-projsaude360/assets/127440373/36be29e4-0c95-4954-bdc9-cacee0f0ec65)
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t11-pmv-ads-2023-2-e2-t11-projsaude360/assets/127440373/70c70746-d83f-4662-9990-ba240e61f5a3)
 
 

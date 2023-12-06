@@ -10,8 +10,11 @@ O detalhamento das personas e histórias de usuário está apresentado na tabela
 ## Histórias de Usuários
 
 Com base na análise das personas forma identificadas as seguintes histórias de usuários:
-![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t11-pmv-ads-2023-2-e2-t11-projsaude360/assets/127440373/36be29e4-0c95-4954-bdc9-cacee0f0ec65)
-![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t11-pmv-ads-2023-2-e2-t11-projsaude360/assets/127440373/70c70746-d83f-4662-9990-ba240e61f5a3)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t11-pmv-ads-2023-2-e2-t11-projsaude360/assets/125780065/305354f5-43a0-4041-b16b-9f4e899abe6b)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t11-pmv-ads-2023-2-e2-t11-projsaude360/assets/125780065/b5f10cee-facd-4076-b419-59f57f230d45)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t11-pmv-ads-2023-2-e2-t11-projsaude360/assets/125780065/e2ab7a4f-5bc4-482f-84ac-044c9c828810)
+
+
 
 
 ### Requisitos Funcionais

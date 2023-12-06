@@ -52,19 +52,15 @@ namespace SeuProjeto.Testes
         [Test]
         public async Task Create_WithInvalidModel_ShouldReturnViewResult()
         {
-            // Arrange
             var controller = new ConsultasController(_context);
             var consultaInvalida = new Consulta
             {
-                // Defina propriedades inválidas para o objeto Consulta
             };
 
             controller.ModelState.AddModelError("NomeMedico", "O campo Nome do Médico é obrigatório");
 
-            // Act
             var result = await controller.Create(consultaInvalida) as ViewResult;
 
-            // Assert
             Assert.NotNull(result);
             Assert.AreEqual(consultaInvalida, result.Model);
         }

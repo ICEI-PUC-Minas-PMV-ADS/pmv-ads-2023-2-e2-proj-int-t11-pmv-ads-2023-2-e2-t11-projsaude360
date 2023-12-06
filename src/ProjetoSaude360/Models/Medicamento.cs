@@ -20,5 +20,6 @@ namespace ProjetoSaude360.Models
 
         //TRATAMENTOs
         public Tratamento? Tratamento { get; set; }
+        public List<Medicamento> MedicamentosExistentes { get; internal set; }
     }
 }

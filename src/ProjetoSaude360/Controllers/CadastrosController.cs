@@ -35,20 +35,16 @@ namespace ProjetoSaude360.Controllers
         }
 
         [AllowAnonymous]
-        public async Task<IActionResult> PerfilUsuario(int id)
+        public async Task<IActionResult> PerfilUsuario(Cadastro cadastro)
         {
-            if (id == null || _context.Cadastros == null)
+            var usuario = await _context.Cadastros.FindAsync(cadastro.Id);
+
+            if (usuario == null)
             {
-                return NotFound();
+                return NotFound(); 
             }
 
-            var cadastro = await _context.Cadastros
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (cadastro == null)
-            {
-                return NotFound();
-            }
-            return View();
+            return View(usuario);
         }
 
         [AllowAnonymous]

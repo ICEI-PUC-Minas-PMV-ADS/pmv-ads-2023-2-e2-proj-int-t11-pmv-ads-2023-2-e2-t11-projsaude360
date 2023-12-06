@@ -1,9 +1,5 @@
 ﻿@model ProjetoSaude360.Models.Medicamento
 
-@{
-    Layout = null;
-}
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -17,6 +13,7 @@
 </head>
 
 <body>
+    @Model.
     <header class="cabecalho">
         <input type="checkbox" id="chec">
         <label for="chec">
@@ -55,7 +52,19 @@
                         <h1 class="titulo-login">Meus medicamentos</h1>
                         <div class="input-single">
                             <div>
-                               
+                                @if (Model.MedicamentosExistentes != null)
+                                {
+                                    @foreach (var medicamento in Model.MedicamentosExistentes)
+                                    {
+                                        <label>@medicamento.Nome</label>
+                                        <button onclick="excluirMedicamento(@medicamento.Id)">X</button>
+                                        <br />
+                                    }
+                                }
+                                else
+                                {
+                                    
+                                }
 
                             </div>
 
@@ -80,10 +89,10 @@
                                 </div>
                                 <div>
                                     <p>Observações:</p>
-                                    <input asp-for="Obs" class="form-control" />
+                                    <textarea asp-for="Obs" class="form-control" />
                                     <span asp-validation-for="Obs" class="text-danger"></span>
                                 </div>
-                                <input class="butom" type="submit" value="Create" id="image" src="./imagem1/mais 2.png" />
+                                <input class="butom" type="submit" value="Create" />
                             </div>
 
                             <img class="barraV" src="./imagem1/Line 35.png">

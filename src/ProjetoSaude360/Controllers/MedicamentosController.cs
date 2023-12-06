@@ -15,6 +15,8 @@ namespace ProjetoSaude360.Controllers
     {
         private readonly ApplicationDbContext _context;
 
+        public List<Medicamento>? MedicamentosExistentes { get; set; }
+
         public MedicamentosController(ApplicationDbContext context)
         {
             _context = context;
@@ -57,15 +59,18 @@ namespace ProjetoSaude360.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Nome,Dosagem,Obs,Info")] Medicamento medicamento)
+        public async Task<IActionResult> Create([Bind("Id,Nome,Dosagem,Obs,Info")] Medicamento medicamentos)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(medicamento);
+                _context.Add(medicamentos);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(medicamento);
+
+            medicamentos.MedicamentosExistentes = await _context.Medicamentos.ToListAsync();
+
+            return View(medicamentos);
         }
 
         // GET: Medicamentos/Edit/5

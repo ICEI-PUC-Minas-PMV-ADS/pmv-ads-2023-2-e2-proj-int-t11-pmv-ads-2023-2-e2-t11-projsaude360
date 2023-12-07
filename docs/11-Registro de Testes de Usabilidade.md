@@ -28,7 +28,12 @@ Após realizar os testes de usabilidade, obtém-se um relatório a partir das an
         <tr>
             <td>Malu, 33 anos</td>
             <td>Organizar e monitorar tratamento</td>
-            <td>1. Realizar cadastro/login, 2. Menu "Perfil", 3. Campo "Tratamentos", 4. Preencher detalhes, 5. Adicionar observações, 6. Localizar anotações</td>
+            <td>1. Realizar cadastro/login, 
+                2. Menu "Perfil", 
+                3. Campo "Tratamentos", 
+                4. Preencher detalhes,
+                5. Adicionar observações, 
+                6. Localizar anotações</td>
             <td>12</td>
             <td>5</td>
         </tr>

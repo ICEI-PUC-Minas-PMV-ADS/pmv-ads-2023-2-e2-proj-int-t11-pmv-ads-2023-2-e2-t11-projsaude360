@@ -13,8 +13,10 @@ Após realizar os testes de usabilidade, obtém-se um relatório a partir das an
   
     </tr>
     <tr>
-        <td>Repositório do código fonte</td>
+        <td>Malu,  33 anos de idade.
+        Ocupação: Formada em arquitetura e urbanismo, trabalha em período integral em uma empresa da área.</td>
         <td>Github</td>
+        
         <td>(https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t11-pmv-ads-2023-2-e2-t11-projsaude360)</td>
     </tr>
     <tr>

@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<h2>Teste de Usabilidade - Introdução</h2>
+<h2>Introdução</h2>
 
 <p>O teste de usabilidade do site "Saúde360" tem como objetivo avaliar a experiência do usuário para diferentes personas, representando usuários com necessidades específicas relacionadas a saúde e organização.</p>
 

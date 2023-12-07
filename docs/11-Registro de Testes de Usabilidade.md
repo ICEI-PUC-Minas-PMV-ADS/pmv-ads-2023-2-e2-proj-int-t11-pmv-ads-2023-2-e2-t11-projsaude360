@@ -28,33 +28,55 @@ Após realizar os testes de usabilidade, obtém-se um relatório a partir das an
         <tr>
             <td>Malu, 33 anos</td>
             <td>Organizar e monitorar tratamento</td>
-            <td>1. Realizar cadastro/login, 
-                2. Menu "Perfil", 
-                3. Campo "Tratamentos", 
-                4. Preencher detalhes,
-                5. Adicionar observações, 
-                6. Localizar anotações</td>
+            <td>
+                1. Realizar cadastro/login<br>
+                2. Menu "Perfil"<br>
+                3. Campo "Tratamentos"<br>
+                4. Preencher detalhes<br>
+                5. Adicionar observações<br>
+                6. Localizar anotações
+            </td>
             <td>12</td>
             <td>5</td>
         </tr>
         <tr>
             <td>Joana, 83 anos</td>
             <td>Monitoramento da pressão arterial e glicemia</td>
-            <td>1. Realizar cadastro/login, 2. Menu "Perfil", 3. Campo "Meus Medicamentos", 4. Preencher detalhes, 5. Acesso aos dados no perfil</td>
+            <td>
+                1. Realizar cadastro/login<br>
+                2. Menu "Perfil"<br>
+                3. Campo "Meus Medicamentos"<br>
+                4. Preencher detalhes<br>
+                5. Acesso aos dados no perfil
+            </td>
             <td>11</td>
             <td>12</td>
         </tr>
         <tr>
             <td>Adriano, 35 anos</td>
             <td>Recordar orientações do médico</td>
-            <td>1. Realizar cadastro/login, 2. Menu "Perfil", 3. Campo "Consultas", 4. Adicionar card, 5. Preencher detalhes, 6. Salvar card</td>
+            <td>
+                1. Realizar cadastro/login<br>
+                2. Menu "Perfil"<br>
+                3. Campo "Consultas"<br>
+                4. Adicionar card<br>
+                5. Preencher detalhes<br>
+                6. Salvar card
+            </td>
             <td>14</td>
             <td>8</td>
         </tr>
         <tr>
             <td>Rafael, 28 anos</td>
             <td>Lembrete de horário e anotações</td>
-            <td>1. Realizar cadastro/login, 2. Menu "Perfil", 3. Campo "Tratamentos", 4. Preencher detalhes, 5. Adicionar observações, 6. Localizar anotações</td>
+            <td>
+                1. Realizar cadastro/login<br>
+                2. Menu "Perfil"<br>
+                3. Campo "Tratamentos"<br>
+                4. Preencher detalhes<br>
+                5. Adicionar observações<br>
+                6. Localizar anotações
+            </td>
             <td>13</td>
             <td>6</td>
         </tr>

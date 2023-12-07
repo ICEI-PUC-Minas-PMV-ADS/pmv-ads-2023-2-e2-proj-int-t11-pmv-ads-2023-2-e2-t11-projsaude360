@@ -11,13 +11,11 @@
 
 <h2>Teste de Usabilidade - Introdução</h2>
 
-<p>Bem-vindo ao teste de usabilidade do aplicativo "HealthCareHub". Este teste tem como objetivo avaliar a experiência do usuário para diferentes personas, representando usuários com necessidades específicas relacionadas a saúde e organização.</p>
+<p>O teste de usabilidade do site "Saúde360" tem como objetivo avaliar a experiência do usuário para diferentes personas, representando usuários com necessidades específicas relacionadas a saúde e organização.</p>
 
 <p>Nossas personas incluem Malu, 33 anos, que busca organizar e monitorar seu tratamento; Joana, 83 anos, que necessita monitorar pressão arterial e glicemia; Adriano, 35 anos, um designer gráfico que precisa recordar orientações médicas; e Rafael, 28 anos, um chef de cozinha que precisa de lembretes para tratamentos específicos.</p>
 
-<p>Cada participante realizará tarefas específicas no aplicativo, proporcionando insights sobre a usabilidade, eficiência e satisfação do usuário. As métricas quantitativas, como cliques e tempo gasto, serão registradas para análise aprofundada dos resultados.</p>
-
-<p>Agradecemos pela sua participação e feedback valioso. Vamos começar!</p>
+<p>Cada participante realizará tarefas específicas no site, proporcionando insights sobre a usabilidade, eficiência e satisfação do usuário. As métricas quantitativas, como cliques e tempo gasto, serão registradas para análise aprofundada dos resultados.</p>
 
 <h2>Dados Quantitativos</h2>
 

@@ -3,12 +3,14 @@
     "",
     "\\src",
     "\\src\\ProjetoSaude360",
+    "\\src\\ProjetoSaude360\\Saude360.Testes",
+    "\\src\\ProjetoSaude360\\Views",
+    "\\src\\ProjetoSaude360\\Views\\Cadastros",
     "\\src\\ProjetoSaude360\\wwwroot",
     "\\src\\ProjetoSaude360\\wwwroot\\css",
     "\\src\\ProjetoSaude360\\wwwroot\\css\\Cadastro",
-    "\\src\\ProjetoSaude360\\wwwroot\\css\\Cadastro\\Login",
     "\\src\\ProjetoSaude360\\wwwroot\\css\\Home"
   ],
-  "SelectedNode": "\\src\\ProjetoSaude360\\wwwroot\\css\\Home\\index.css",
+  "SelectedNode": "\\src\\ProjetoSaude360.sln",
   "PreviewInSolutionExplorer": false
 }

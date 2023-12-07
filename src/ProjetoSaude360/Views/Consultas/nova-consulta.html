@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/nova-consulta.css" />
+    <title>Nova Consulta</title>
+</head>
+
+<body>
+    <main>
+        <h1>Nova Consulta</h1>
+        <div class="form-container">
+            <form id="consul-form">
+                <div class="form-group">
+                    <label for="nome-medico">Nome do Médico:</label>
+                    <input type="text" id="nome-medico" name="nome-medico" required>
+                </div>
+                <div class="form-group">
+                    <label for="motivo-consulta">Motivo da Consulta:</label>
+                    <input type="text" id="motivo-consulta" name="motivo-consulta" required>
+                </div>
+                <div class="form-group">
+                    <label for="data-consulta">Data da Consulta:</label>
+                    <input type="date" id="data-consulta" name="data-consulta" required>
+                </div>
+                <div class="form-group">
+                    <label for="anotacoes">Anotações:</label>
+                    <textarea id="anotacoes" name="anotacoes" rows="4"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="recomendacoes">Recomendações:</label>
+                    <div class="recomendacoes">
+                        <textarea id="recomendacoes" name="recomendacoes" rows="4"></textarea>
+                    </div>
+                </div>
+                <div class="form-group salvar-container">
+                    <button type="submit">Salvar</button>
+                </div>
+            </form>
+        </div>
+        </div>
+    </main>
+
+</body>
+
+</html>

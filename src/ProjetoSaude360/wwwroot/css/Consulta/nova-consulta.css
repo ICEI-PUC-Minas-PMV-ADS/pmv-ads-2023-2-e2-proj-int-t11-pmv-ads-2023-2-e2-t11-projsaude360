@@ -1,0 +1,77 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 40px;
+    background: linear-gradient(to top, #ffffff 70%, #F496FE);
+}
+
+h1{
+   text-align: center;
+}
+
+.form-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input[type="text"] {
+    width: calc(100% - 22px);
+    background-color: rgb(224, 224, 224);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-group input[type="date"] {
+    width: calc(100% - 22px);
+    background-color: rgb(224, 224, 224);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-group textarea {
+    width: calc(100% - 22px);
+    background-color: rgb(224, 224, 224);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-group button {
+    width: 50%;
+    background-color: #929992;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.recomendacoes {
+    width: calc(100% - 22px);
+    height: 80px;
+    background-color: #ccc;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.salvar-container {
+    text-align: center;
+}

@@ -26,10 +26,10 @@ Após realizar os testes de usabilidade, obtém-se um relatório a partir das an
     </thead>
     <tbody>
         <tr>
-            <td>Malu, 33 anos</td>
+            <td>Malu, 33 anos. Ocupação: Formada em arquitetura e urbanismo, trabalha em período integral em uma empresa da área. </td>
             <td>Organizar e monitorar tratamento</td>
             <td>
-                1. Realizar cadastro/login<br>
+                1. Realizar cadastro no site/ou efetuar login caso já tenha cadastrado.<br>
                 2. Menu "Perfil"<br>
                 3. Campo "Tratamentos"<br>
                 4. Preencher detalhes<br>

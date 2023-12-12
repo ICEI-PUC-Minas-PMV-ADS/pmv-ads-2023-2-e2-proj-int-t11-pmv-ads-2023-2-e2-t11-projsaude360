@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ProjetoSaude360.Models;
 
@@ -11,9 +12,11 @@ using ProjetoSaude360.Models;
 namespace ProjetoSaude360.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231207183947_AlteracaoTabelaTratamentos")]
+    partial class AlteracaoTabelaTratamentos
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -73,9 +76,6 @@ namespace ProjetoSaude360.Migrations
                     b.Property<DateTime>("DataConsulta")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("IdUsuario")
-                        .HasColumnType("int");
-
                     b.Property<string>("MotivoConsulta")
                         .HasColumnType("nvarchar(max)");
 
@@ -105,9 +105,6 @@ namespace ProjetoSaude360.Migrations
 
                     b.Property<string>("Dosagem")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("IdUsuario")
-                        .HasColumnType("int");
 
                     b.Property<string>("Info")
                         .HasColumnType("nvarchar(max)");

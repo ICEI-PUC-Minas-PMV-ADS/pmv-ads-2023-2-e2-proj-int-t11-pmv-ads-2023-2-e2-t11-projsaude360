@@ -9,6 +9,9 @@ namespace ProjetoSaude360.Models
         [Key]
         public int Id { get; set; }
 
+        [Required]
+        public string Nome { get; set; }
+
         public double? Dosagem { get; set; }
 
         [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:yyyy-MM-dd}")]
@@ -25,9 +28,9 @@ namespace ProjetoSaude360.Models
 
         //Cadastro
         public Cadastro? Cadastro { get; set; }
-
+        public int IdUsuario { get; set; }
+        
         // Medicamentos
         public ICollection<Medicamento>? Medicamentos { get; set; }
-
     }
 }

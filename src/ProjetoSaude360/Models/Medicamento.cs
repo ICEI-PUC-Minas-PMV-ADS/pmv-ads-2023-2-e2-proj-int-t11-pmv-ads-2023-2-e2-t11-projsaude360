@@ -16,14 +16,14 @@ namespace ProjetoSaude360.Models
 
         public string? Obs { get; set; }
 
-
-        public string? Info{ get; set; }
+        public string? Info { get; set; }
 
         //TRATAMENTOs
         public Tratamento? Tratamento { get; set; }
-        public List<Medicamento> MedicamentosExistentes { get; internal set; }
 
         //Cadastros
-        public Cadastro Cadastros { get; set; }
+        public Cadastro? Cadastros { get; set; }
+        public int IdUsuario { get; set;}
+
     }
 }

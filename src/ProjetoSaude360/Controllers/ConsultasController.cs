@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -15,6 +16,8 @@ namespace ProjetoSaude360.Controllers
     {
         private readonly ApplicationDbContext _context;
 
+        public Cadastro Cadastros { get; set; }
+
         public ConsultasController(ApplicationDbContext context)
         {
             _context = context;
@@ -23,8 +26,10 @@ namespace ProjetoSaude360.Controllers
         // GET: Consultas
         public async Task<IActionResult> Index()
         {
+            var idUsuario = ObterUsuarioId();
+
               return _context.Consultas != null ? 
-                          View(await _context.Consultas.ToListAsync()) :
+                          View(await _context.Consultas.Where( c=> c.IdUsuario == idUsuario).ToListAsync()) :
                           Problem("Entity set 'ApplicationDbContext.Consultas'  is null.");
         }
 
@@ -57,15 +62,18 @@ namespace ProjetoSaude360.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,NomeMedico,MotivoConsulta,DataConsulta,Recomendacoes")] Consulta consulta)
+        public async Task<IActionResult> Create([Bind("Id,NomeMedico,MotivoConsulta,DataConsulta,Recomendacoes")] Consulta novaConsulta)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(consulta);
+                novaConsulta.IdUsuario = ObterUsuarioId();
+
+                _context.Add(novaConsulta);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(consulta);
+
+            return View();
         }
 
         // GET: Consultas/Edit/5
@@ -159,6 +167,11 @@ namespace ProjetoSaude360.Controllers
         private bool ConsultaExists(int id)
         {
           return (_context.Consultas?.Any(e => e.Id == id)).GetValueOrDefault();
+        }
+
+        private int ObterUsuarioId()
+        {
+            return Convert.ToInt32(User.FindFirst(ClaimTypes.NameIdentifier)?.Value?.ToString());
         }
     }
 }

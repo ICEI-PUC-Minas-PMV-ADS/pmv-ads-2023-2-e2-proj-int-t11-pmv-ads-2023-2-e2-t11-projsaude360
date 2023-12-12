@@ -16,6 +16,8 @@ namespace ProjetoSaude360.Controllers
 
         public Enums.Perfil Perfis { get; set; }
 
+         public Cadastro Cadastros { get; set; }
+
         public CadastrosController(ApplicationDbContext context)
         {
             _context = context;
@@ -149,24 +151,22 @@ namespace ProjetoSaude360.Controllers
             return View(cadastro);
         }
 
-        [AllowAnonymous]
-        public async Task<IActionResult> Edit(int? id)
+        public async Task<IActionResult> Edit()
         {
-            if (id == null || _context.Cadastros == null)
+            var idUsuario = ObterUsuarioId();
+
+            if (idUsuario == 0 || _context.Cadastros == null)
             {
                 return NotFound();
             }
 
-            var cadastro = await _context.Cadastros.FindAsync(id);
+            var cadastro = await _context.Cadastros.FindAsync(idUsuario);
             if (cadastro == null)
             {
                 return NotFound();
             }
 
-            _context.Add(cadastro);
-            await _context.SaveChangesAsync();
-
-            return View();
+            return View(cadastro);
         }
 
         [HttpPost]
@@ -240,6 +240,11 @@ namespace ProjetoSaude360.Controllers
         private bool CadastroExists(int id)
         {
             return (_context.Cadastros?.Any(e => e.Id == id)).GetValueOrDefault();
+        }
+
+        private int ObterUsuarioId()
+        {
+            return Convert.ToInt32(User.FindFirst(ClaimTypes.NameIdentifier)?.Value?.ToString());
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -27,8 +28,10 @@ namespace ProjetoSaude360.Controllers
         // GET: Medicamentos
         public async Task<IActionResult> Index()
         {
-              return _context.Medicamentos != null ? 
-                          View(await _context.Medicamentos.ToListAsync()) :
+            var idUsuario = ObterUsuarioId();
+
+            return _context.Medicamentos != null ?
+                          View(await _context.Medicamentos.Where(m => m.IdUsuario == idUsuario).ToListAsync()) :
                           Problem("Entity set 'ApplicationDbContext.Medicamentos'  is null.");
         }
 
@@ -61,18 +64,34 @@ namespace ProjetoSaude360.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Nome,Dosagem,Obs,Info")] Medicamento medicamentos)
+        public async Task<IActionResult> Create([Bind("Id,Nome,Dosagem,Obs,Info")] Medicamento novoMedicamento)
         {
-            medicamentos.MedicamentosExistentes = new List<Medicamento> { medicamentos };
 
             if (ModelState.IsValid)
             {
-                _context.Add(medicamentos);
+                novoMedicamento.IdUsuario = ObterUsuarioId();
+
+                _context.Add(novoMedicamento);
                 await _context.SaveChangesAsync();
+
                 return RedirectToAction(nameof(Index));
             }
 
-            return View(medicamentos);
+            return View();
+        }
+
+        public async Task<IActionResult> ExcluirMedicamento(int id)
+        {
+            var medicamento = await _context.Medicamentos.FindAsync(id);
+            if (medicamento == null)
+            {
+                return NotFound();
+            }
+
+            _context.Medicamentos.Remove(medicamento);
+            await _context.SaveChangesAsync();
+
+            return Json(new { success = true, message = "Medicamento excluído com sucesso." });
         }
 
         // GET: Medicamentos/Edit/5
@@ -158,14 +177,19 @@ namespace ProjetoSaude360.Controllers
             {
                 _context.Medicamentos.Remove(medicamento);
             }
-            
+
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool MedicamentoExists(int id)
         {
-          return (_context.Medicamentos?.Any(e => e.Id == id)).GetValueOrDefault();
+            return (_context.Medicamentos?.Any(e => e.Id == id)).GetValueOrDefault();
+        }
+
+        private int ObterUsuarioId()
+        {
+            return Convert.ToInt32(User.FindFirst(ClaimTypes.NameIdentifier)?.Value?.ToString());
         }
     }
 }

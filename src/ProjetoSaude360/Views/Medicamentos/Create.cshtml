@@ -13,6 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/Medicamentos/medicamentos.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <title>Saude360</title>
 </head>
 
@@ -24,11 +25,10 @@
         </label>
         <nav class="navigation">
             <ul class="opcoes">
-                <li><a href="Index.html">Início</a></li>
-                <li><a href="">Perfil</a></li>
-                <li><a href="">Tratamentos</a></li>
-                <li><a href="">Medicamentos</a></li>
-                <li><a href="">Ciclo Menstrual</a></li>
+                <li><a href="https://localhost:7156">Início</a></li>
+                <li><a href="/Cadastros/PerfilUsuario">Perfil</a></li>
+                <li><a href="/Tratamentos/Index">Tratamentos</a></li>
+                <li><a href="/Medicamentos/Index">Medicamentos</a></li>
             </ul>
         </nav>
         <ul class="navbar-nav">
@@ -55,11 +55,11 @@
                         <h1 class="titulo-login">Meus medicamentos</h1>
                         <div class="input-single">
                             <div>
-                                @if (Model != null && Model.MedicamentosExistentes != null)
+                                @if (ViewBag.MedicamentosExistentes != null && ViewBag.MedicamentosExistentes.Any())
                                 {
-                                    @foreach (var medicamento in Model.MedicamentosExistentes)
+                                    @foreach (var medicamento in ViewBag.MedicamentosExistentes)
                                     {
-                                        <label value="@Model.Nome" class="label-nome-medicamento">@medicamento.Nome</label>
+                                        <label class="label-nome-medicamento">@medicamento.Nome</label>
                                         <button class="btn-excluir-medicamento" onclick="excluirMedicamento(@medicamento.Id)">X</button>
                                         <br />
                                     }
@@ -111,6 +111,28 @@
 </body>
 
 </html>
+
+<script>
+    function excluirMedicamento(id) {
+        if (confirm("Deseja excluir este medicamento?")) {
+            $.ajax({
+                url: '/Medicamentos/ExcluirMedicamento/' + id,
+                type: 'POST',
+                success: function (result) {
+                    if (result.success) {
+                        
+                        location.reload();
+                    } else {
+                        alert(result.message);
+                    }
+                },
+                error: function () {
+                    alert('Erro ao excluir o medicamento.');
+                }
+            });
+        }
+    }
+</script>
 
 @section Scripts {
     @{

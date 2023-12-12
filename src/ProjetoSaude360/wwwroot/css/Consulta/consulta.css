@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Sarala&display=swap');
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+a {
+    text-decoration: none;
+    display: block;
+    padding: 3px 20px;
+    color: white;
+    font-size: 25px;
+    
+}
+
+body {
+    font-family: Arial;
+    background-size: 100%;
+    background: linear-gradient(187deg, #ffffff 70%, #F496FE);
+    margin: 0;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.header-right {
+    display: flex;
+    gap: 80px;
+    align-items: center;
+
+}
+
+.imagemLogo {
+    padding-left: 120px;
+    padding-top: 15px;
+    height: 40px;
+    width: 80px;
+}
+
+
+#rede_instagram {
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+
+
+ul {
+    list-style: none;
+}
+
+menu {
+    height: 15px;
+    width: 15px;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+nav {
+    background-color: rgba(133, 133, 133, 0.796);
+    width: 350px;
+    left: -350px;
+    height: 100%;
+    position: absolute;
+    transition: all .5s;
+}
+
+input[type="checkbox"]:checked ~ nav {
+    transform: translateX(350px);
+}
+
+.opcoes {
+    position: absolute;
+    top: 70px;
+    width: 100%;
+}
+
+.perfil {
+    display: block;
+    padding: 35px 20px;
+    color: white;
+    font-size: 25px;
+}
+
+    .perfil:hover {
+        background-color: #4846468e;
+    }
+
+label {
+    padding: 20px;
+    position: absolute;
+    z-index: 1;
+    font-family: 'Righteous', cursive;
+    font-size: 16px;
+    color: #00000088;
+}
+
+.separador {
+    margin-top: 15px;
+    margin-left: 70px;
+    margin-right: 70px;
+    border-top: 0.04rem solid #6f6c6c38;
+}
+
+.conteudo {
+    display: flex;
+    flex-direction: row;
+}
+
+.titulo-consulta {
+    text-align: center;
+    margin: auto;
+    padding-top: 50px;
+}
+
+.pesquisa {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+form {
+    width: 40%;
+}
+
+.barrapesquisa {
+    margin-top: 7px;
+    border-radius: 25px;
+    width: 100%;
+    border: 1px solid #8f8f8f;
+    padding: 10px;
+    font-size: 16px;
+    height: 20px;
+}
+
+#botao-mais {
+    width: 100%;
+    height: 100%;
+    border: none;
+    cursor: pointer;
+    background-size: cover;
+}

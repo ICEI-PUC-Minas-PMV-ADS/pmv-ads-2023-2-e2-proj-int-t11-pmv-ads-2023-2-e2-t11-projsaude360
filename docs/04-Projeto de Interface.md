@@ -86,30 +86,6 @@ Visão geral da interação do usuário pelas telas do sistema e protótipo inte
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t11-pmv-ads-2023-2-e2-t11-projsaude360/assets/125780065/b02672a5-8ace-4969-900b-02e59b3c936c)
 
 
-<h2>Tela 9 - Ciclo Menstrual</h2>
-
-<p>Para usuárias do genero feminino, está disponivel a opção de acompanhar ciclo menstrual, conforme abaixo, a usuario precisa informar os seguintes dados: Duração, medicação utilizada, fluxo, Condição. Após isso, a usuaria tem acesso para o seu acompanhamento diário, Alterações físicas e Humor.</p>
-
-![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t11-pmv-ads-2023-2-e2-t11-projsaude360/assets/125780065/cd24bfac-116e-42cf-87eb-e0a71f69829c)
-
-<h4>Tela Acompanhamento diário</h4>
-
-<p>Nessa tela, a usuaria tem acesso ao seu acompanhamento com o calendário menstrual, aos dias de ovulação e periodo fértil.</p>
-
-![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t11-pmv-ads-2023-2-e2-t11-projsaude360/assets/125780065/ba7d9000-f66b-4729-9488-f1f844a58029)
-
-<h4>Tela Alterações Físicas</h4>
-
-<p>A usuária tem acesso para marcar suas alterações físicas perceptiveis no periodo menstrual.</p>
-
-![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t11-pmv-ads-2023-2-e2-t11-projsaude360/assets/125780065/5fe750ad-2aaf-4f9c-929d-da1e29ebfe6b)
-
-<h4>Tela Alterações de Humor</h4>
-
-<p> Seguindo o mesmo critério anterior, a usuária pode informar as alterações de humor enquanto está no período menstrual.</p>
-
-![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-2-e2-proj-int-t11-pmv-ads-2023-2-e2-t11-projsaude360/assets/125780065/665261c9-adec-403a-a096-03353e33bc92)
-
 
 
 

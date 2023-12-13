@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@model ProjetoSaude360.Models.Cadastro
+
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -39,65 +41,46 @@
             }
         </ul>
     </header>
-
     <div class="container">
-      <div class="column">
-        <div class="profile-picture"></div>
-        <div class="form-group">
-          <label for="nome"></label>
-          <input
-            type="text"
-            id="nome"
-            name="nome"
-            class="form-control"
-            placeholder="Nome"
-          />
-        </div>
-      </div>
+        <form asp-action="Edit" method="post">
+            <div class="column">
+                <div class="form-group">
+                    <label asp-for="Nome"></label>
+                    <input asp-for="Nome" class="form-control" placeholder="Nome" />
+                    <span asp-validation-for="Nome" class="text-danger"></span>
+                </div>
+            </div>
 
-      <div class="column">
-        <div class="form-group">
-          <label for="genero">Gênero:</label>
-          <select id="genero" name="genero" class="form-control"></select>
-        </div>
-        <div class="form-group">
-          <label for="dataNascimento">Data de Nascimento:</label>
-          <input
-            type="text"
-            id="dataNascimento"
-            name="dataNascimento"
-            class="form-control"
-            placeholder="Data de Nascimento"
-          />
-        </div>
-      </div>
+            <div class="column">
+                <div class="form-group">
+                    <label asp-for="Genero">Gênero:</label>
+                    <select asp-for="Genero" asp-items="@Html.GetEnumSelectList<Enums.Genero>()" class="form-control"></select>
+                    <span asp-validation-for="Genero" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="DataDeNascimento">Data de Nascimento:</label>
+                    <input asp-for="DataDeNascimento" class="form-control" placeholder="Data de Nascimento" />
+                    <span asp-validation-for="DataDeNascimento" class="text-danger"></span>
+                </div>
+            </div>
 
-      <div class="column">
-        <div class="form-group">
-          <label for="telefone">Telefone:</label>
-          <input
-            type="text"
-            id="telefone"
-            name="telefone"
-            class="form-control"
-            placeholder="Telefone"
-          />
-        </div>
-        <div class="form-group">
-          <label for="email">Email:</label>
-          <input
-            type="text"
-            id="email"
-            name="email"
-            class="form-control"
-            placeholder="Email"
-          />
-        </div>
-        <div class="buttons">
-          <button class="edit-button" type="submit">Editar</button>
-          <button class="cancel-button">Cancelar</button>
-        </div>
-      </div>
+            <div class="column">
+                <div class="form-group">
+                    <label asp-for="Telefone">Telefone:</label>
+                    <input asp-for="Telefone" class="form-control" placeholder="Telefone" />
+                    <span asp-validation-for="Telefone" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Email">Email:</label>
+                    <input asp-for="Email" class="form-control" placeholder="Email" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="buttons">
+                    <button type="submit" class="edit-button">Editar</button>
+                    <button type="button" class="cancel-button">Cancelar</button>
+                </div>
+            </div>
+        </form>
     </div>
 
     
@@ -105,7 +88,6 @@
 </html>
 
 <style>
-    /* Adicione os estilos CSS aqui */
     body {
         font-family: Arial, sans-serif;
         margin: 0;

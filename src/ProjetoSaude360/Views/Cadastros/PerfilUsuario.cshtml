@@ -39,52 +39,60 @@
         }
     </ul>
 </header>
-<div class="row">
-    <div class="col-md-4">
-        <input type="hidden" id="@Model.Id"/>
-        <form asp-action="PerfilUsuario">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Nome" class="control-label"></label>
-                <input asp-for="Nome" class="form-control" />
-                <span asp-validation-for="Nome" class="text-danger"></span>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Página PerfilUsuario</title>
+</head>
+<body>
+    <div class="header"></div>
+    <div class="container">
+        <div class="coluna coluna1">
+            <div class="foto">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='224' height='221' viewBox='0 0 224 221' fill='none'%3E%3Cpath d='M113.567 0.0102208C50.5804 -0.825332 -0.840324 49.678 0.0104064 111.541C0.850368 170.87 50.0366 219.179 110.444 220.004C173.441 220.85 224.851 170.347 223.989 108.484C223.16 49.1439 173.974 0.835197 113.567 0.0102208ZM181.636 173.07C181.421 173.298 181.159 173.477 180.866 173.594C180.573 173.71 180.258 173.763 179.943 173.746C179.627 173.73 179.319 173.646 179.04 173.5C178.762 173.354 178.519 173.149 178.33 172.901C173.514 166.712 167.616 161.414 160.911 157.253C147.203 148.612 129.833 143.852 112.005 143.852C94.1776 143.852 76.8076 148.612 63.099 157.253C56.3948 161.412 50.4969 166.709 45.6806 172.896C45.4914 173.144 45.2488 173.349 44.9702 173.495C44.6915 173.641 44.3835 173.725 44.068 173.741C43.7525 173.757 43.4373 173.705 43.1446 173.588C42.852 173.471 42.5891 173.293 42.3746 173.065C26.5751 156.313 17.6253 134.425 17.2404 111.594C16.3627 60.133 59.3569 17.0597 111.774 16.9328C164.191 16.8059 206.77 58.61 206.77 110.007C206.788 133.389 197.811 155.914 181.636 173.07Z' fill='black' fill-opacity='0.3'/%3E%3Cpath d='M112.005 50.7778C101.387 50.7778 91.7869 54.6859 84.9649 61.7881C78.1429 68.8903 74.7346 78.7107 75.5046 89.2503C77.0661 110.007 93.4399 126.929 112.005 126.929C130.571 126.929 146.912 110.007 148.506 89.2556C149.303 78.8164 145.921 69.086 138.986 61.8516C132.137 54.7123 122.553 50.7778 112.005 50.7778Z' fill='black' fill-opacity='0.3'/%3E%3C/svg%3E"
+                     alt="Foto do Perfil" />
             </div>
-            <div class="form-group">
-                <label asp-for="Senha" class="control-label"></label>
-                <input asp-for="Senha" class="form-control" />
-                <span asp-validation-for="Senha" class="text-danger"></span>
+            <div class="nome">
+                <p>Perfil Teste</p>
             </div>
-            <div class="form-group">
-                <label asp-for="Genero" class="control-label"></label>
-                <select asp-for="Genero" class="form-control"></select>
-                <span asp-validation-for="Genero" class="text-danger"></span>
+            <div class="dados-basicos">
+                <p>Idade: 50 anos</p>
+                <p>Gênero: Feminino</p>
+                <p>Data de Nascimento: 01/01/0001</p>
             </div>
-            <div class="form-group">
-                <label asp-for="DataDeNascimento" class="control-label"></label>
-                <input asp-for="DataDeNascimento" class="form-control" />
-                <span asp-validation-for="DataDeNascimento" class="text-danger"></span>
+        </div>
+        <div class="divisoria"></div>
+        <div class="coluna coluna2">
+            <div class="sub-coluna">
+                <div class="coluna3">
+                    <button class="botao">
+                        <span class="botao-texto">Medicamentos</span>
+                    </button>
+                    <button class="botao">
+                        <span class="botao-texto">Editar Perfil</span>
+                    </button>
+                    <button class="botao">
+                        <span class="botao-texto">Tratamentos</span>
+                    </button>
+                </div>
+                <div class="coluna4">
+                    <button class="botao">
+                        <span class="botao-texto">Ciclo Menstrual</span>
+                    </button>
+                    <button class="botao">
+                        <span class="botao-texto">Consultas</span>
+                    </button>
+                </div>
             </div>
-            <div class="form-group">
-                <label asp-for="Email" class="control-label"></label>
-                <input asp-for="Email" class="form-control" />
-                <span asp-validation-for="Email" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Telefone" class="control-label"></label>
-                <input asp-for="Telefone" class="form-control" />
-                <span asp-validation-for="Telefone" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Perfil" class="control-label"></label>
-                <select asp-for="Perfil" class="form-control"></select>
-                <span asp-validation-for="Perfil" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
+        </div>
     </div>
-</div>
+</body>
+</html>
+
+
 
 <div>
     <a asp-action="Index">Back to List</a>
@@ -93,3 +101,142 @@
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+    }
+
+    .header {
+        height: 90px;
+        background-color: #f2f2f2;
+    }
+
+    .container {
+        display: flex;
+        align-items: center;
+        background: linear-gradient( 180deg, #fbfefc 69.39%, #b5ffe0 85.29%, #7bf9c4 93.83%, #40f7aa 100% );
+        flex: 1;
+        padding: 20px;
+    }
+
+    .divisoria {
+        width: 2px;
+        height: 100%;
+        background-color: #ccc;
+        margin: 0 20px;
+    }
+
+    .coluna {
+        flex: 1;
+    }
+
+    .coluna1 {
+        flex: 0.4;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .coluna2 {
+        flex: 0.6;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: -180px;
+    }
+
+    .sub-coluna {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .coluna3,
+    .coluna4 {
+        display: flex;
+        flex-direction: column;
+    }
+
+        .coluna3 button,
+        .coluna4 button {
+            margin-bottom: 8px;
+            background: rgba(70, 71, 69, 0.3);
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+            border: none;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            width: 130px;
+            height: 120px;
+            border-radius: 24px;
+            margin-right: 16px;
+        }
+
+    .botao-texto {
+        color: #fff;
+        text-align: center;
+        font-family: Righteous, sans-serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-bottom: 12px;
+    }
+
+    .foto {
+        width: 224px;
+        height: 220.014px;
+        background-color: lightgray;
+        margin-bottom: 10px;
+        overflow: hidden;
+        border-radius: 50%;
+    }
+
+        .foto img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+    .nome {
+        width: 292px;
+        height: 40px;
+        flex-shrink: 0;
+        line-height: normal;
+        margin-bottom: 12px;
+        margin-top: -10px;
+    }
+
+        .nome p {
+            display: flex;
+            color: #000;
+            font-family: Righteous;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            justify-content: space-around;
+        }
+
+    .dados-basicos {
+        display: flex;
+        width: 300px;
+        height: 107px;
+        flex-shrink: 0;
+        flex-direction: column;
+        align-items: center;
+    }
+
+        .dados-basicos p {
+            margin: 0;
+            font-family: 'Noto Sans', sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            margin-bottom: 8px;
+        }
+</style>

@@ -17,18 +17,19 @@
     <header class="cabecalho">
         <input type="checkbox" id="chec">
         <label for="chec">
-            <img class="menu" src="/Images/menu_barra.png">
+            <img class="menu" src="/images/menu_barra.png">
         </label>
         <nav class="navigation">
             <ul class="opcoes">
                 <li><a href="https://localhost:7156">Início</a></li>
-                <li><a href="">Perfil</a></li>
-                <li><a href="">Tratamentos</a></li>
-                <li><a href="">Medicamentos</a></li>
-                <li><a href="">Ciclo Menstrual</a></li>
+                <li><a href="/Cadastros/PerfilUsuario">Perfil</a></li>
+                <li><a href="/Tratamentos/Index">Tratamentos</a></li>
+                <li><a href="/Medicamentos/Index">Medicamentos</a></li>
             </ul>
         </nav>
-        <img class="imagemLogo" src="~/images/Logo.png">
+
+        <img class="imagemLogo" src="/images/Logo.png">
+
         <ul class="navbar-nav">
             @if (User.Identity.IsAuthenticated)
             {

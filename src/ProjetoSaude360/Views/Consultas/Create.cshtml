@@ -1,48 +1,102 @@
 ﻿@model ProjetoSaude360.Models.Consulta
 
 @{
-    ViewData["Title"] = "Create";
+    Layout = null;
 }
 
-<h1>Create</h1>
+<!DOCTYPE html>
+<html lang="pt-br">
 
-<h4>Consulta</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="NomeMedico" class="control-label"></label>
-                <input asp-for="NomeMedico" class="form-control" />
-                <span asp-validation-for="NomeMedico" class="text-danger"></span>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/Consulta/consulta.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <title>Saude360</title>
+</head>
+
+<body>
+    <header class="cabecalho">
+        <input type="checkbox" id="chec">
+        <label for="chec">
+            <img class="menu" src="/images/menu_barra.png">
+        </label>
+        <nav class="navigation">
+            <ul class="opcoes">
+                <li><a href="https://localhost:7156">Início</a></li>
+                <li><a href="/Cadastros/PerfilUsuario">Perfil</a></li>
+                <li><a href="/Tratamentos/Index">Tratamentos</a></li>
+                <li><a href="/Medicamentos/Index">Medicamentos</a></li>
+            </ul>
+        </nav>
+
+        <img class="imagemLogo" src="/images/Logo.png">
+
+        <ul class="navbar-nav">
+            @if (User.Identity.IsAuthenticated)
+            {
+                <li class="nav-item">
+                    Olá @User.Identity.Name <a class="nav-link text-dark" asp-area="" asp-controller="Cadastros" asp-action="Logout">Logout</a>
+                </li>
+            }
+            else
+            {
+                <li class="nav-item">
+                    <a class="nav-link text-dark" asp-area="" asp-controller="Cadastros" asp-action="Login">Login</a>
+                </li>
+            }
+        </ul>
+    </header>
+
+    <div class="separador">
+        <main class="conteudo">
+            <section class="form-container">
+                <div class="container">
+                    <form asp-action="Create">
+                        <div class="input-single">
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                            <div class="form-group">
+                                <label asp-for="NomeMedico" class="control-label"></label>
+                                <input asp-for="NomeMedico" class="input" />
+                                <span asp-validation-for="NomeMedico" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="MotivoConsulta" class="control-label"></label>
+                                <input asp-for="MotivoConsulta" class="input" />
+                                <span asp-validation-for="MotivoConsulta" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="DataConsulta" class="control-label"></label>
+                                <input asp-for="DataConsulta" class="input" />
+                                <span asp-validation-for="DataConsulta" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Recomendacoes" class="control-label"></label>
+                                <textarea asp-for="Recomendacoes" class="text-area"></textarea>
+                                <span asp-validation-for="Recomendacoes" class="text-danger"></span>
+                            </div>
+                            <div class="btn">
+                                <input type="submit" value="Create" class="btn btn-primary" />
+                            </div>
+                        </div>
+                    </form>
+                    <div class="text-index">
+                        <a asp-action="Index" >Ver Consultas</a>
+                    </div>
+                </div>
+            </section>
+            <div class="imagem-cadastro">
+                <img src="/Images/imagem_tela_consultas.png">
             </div>
-            <div class="form-group">
-                <label asp-for="MotivoConsulta" class="control-label"></label>
-                <input asp-for="MotivoConsulta" class="form-control" />
-                <span asp-validation-for="MotivoConsulta" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="DataConsulta" class="control-label"></label>
-                <input asp-for="DataConsulta" class="form-control" />
-                <span asp-validation-for="DataConsulta" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Recomendacoes" class="control-label"></label>
-                <input asp-for="Recomendacoes" class="form-control" />
-                <span asp-validation-for="Recomendacoes" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
+        </main>
     </div>
-</div>
+</body>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
+</html>
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }

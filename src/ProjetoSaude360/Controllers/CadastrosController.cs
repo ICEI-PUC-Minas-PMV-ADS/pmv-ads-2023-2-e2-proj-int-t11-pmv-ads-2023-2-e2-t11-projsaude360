@@ -41,12 +41,12 @@ namespace ProjetoSaude360.Controllers
         {
             var idUsuario = await _context.Cadastros.FindAsync(cadastro.Id);
 
-            if (usuario == null)
+            if (idUsuario == null)
             {
                 return NotFound(); 
             }
 
-            return View(usuario);
+            return View(cadastro);
         }
 
         [AllowAnonymous]

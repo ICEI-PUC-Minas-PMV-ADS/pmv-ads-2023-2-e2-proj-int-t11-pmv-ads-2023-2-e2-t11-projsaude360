@@ -6,14 +6,14 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Edição de Perfil</title>
-  </head>
+</head>
 
-  <body>
+<body>
     <header class="cabecalho">
         <input type="checkbox" id="chec">
         <label for="chec">
@@ -46,38 +46,36 @@
         </ul>
     </header>
     <div class="container">
-        <form asp-action="Edit" method="post">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
             <div class="column">
                 <div class="form-group">
-                    <label asp-for="Nome"></label>
-                    <input asp-for="Nome" class="form-control" placeholder="Nome" />
+                    <label asp-for="Nome" class="control-label">Nome:</label>
+                    <input asp-for="Nome" class="form-control" />
                     <span asp-validation-for="Nome" class="text-danger"></span>
                 </div>
-            </div>
-
-            <div class="column">
                 <div class="form-group">
-                    <label asp-for="Genero">Gênero:</label>
+                    <label asp-for="Genero" class="control-label">Gênero:</label>
                     <select asp-for="Genero" asp-items="@Html.GetEnumSelectList<Enums.Genero>()" class="form-control"></select>
                     <span asp-validation-for="Genero" class="text-danger"></span>
                 </div>
                 <div class="form-group">
-                    <label asp-for="DataDeNascimento">Data de Nascimento:</label>
-                    <input asp-for="DataDeNascimento" class="form-control" placeholder="Data de Nascimento" />
+                    <label asp-for="DataDeNascimento" class="control-label">Data de Nascimento:</label>
+                    <input asp-for="DataDeNascimento" class="form-control" />
                     <span asp-validation-for="DataDeNascimento" class="text-danger"></span>
                 </div>
             </div>
-
             <div class="column">
                 <div class="form-group">
-                    <label asp-for="Telefone">Telefone:</label>
-                    <input asp-for="Telefone" class="form-control" placeholder="Telefone" />
-                    <span asp-validation-for="Telefone" class="text-danger"></span>
+                    <label asp-for="Email" class="control-label">Email:</label>
+                    <input asp-for="Email" class="form-control" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
                 </div>
                 <div class="form-group">
-                    <label asp-for="Email">Email:</label>
-                    <input asp-for="Email" class="form-control" placeholder="Email" />
-                    <span asp-validation-for="Email" class="text-danger"></span>
+                    <label asp-for="Telefone" class="control-label">Telefone:</label>
+                    <input asp-for="Telefone" class="form-control" />
+                    <span asp-validation-for="Telefone" class="text-danger"></span>
                 </div>
                 <div class="buttons">
                     <button type="submit" class="edit-button">Editar</button>
@@ -87,8 +85,8 @@
         </form>
     </div>
 
-    
-  </body>
+
+</body>
 </html>
 
 <style>
@@ -97,7 +95,6 @@
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        display: flex;
         align-items: center;
         justify-content: center;
         height: 100vh;
@@ -108,7 +105,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        background-color: #fff; /* Adicione uma cor de fundo para o cabeçalho, se necessário */
+        background-color: #fff;
         padding: 10px 20px;
         box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
     }
@@ -127,7 +124,6 @@
         padding: 0;
         margin: 0;
         display: flex;
-        gap: 20px;
     }
 
         .opcoes li {
@@ -136,11 +132,11 @@
 
         .opcoes a {
             text-decoration: none;
-            color: #000; /* Defina a cor desejada para os links */
+            color: #000;
         }
 
     .imagemLogo {
-        width: 100px; /* Ajuste o tamanho conforme necessário */
+        width: 100px;
         height: auto;
     }
 
@@ -149,7 +145,6 @@
         padding: 0;
         margin: 0;
         display: flex;
-        gap: 20px;
     }
 
         .navbar-nav li {
@@ -158,12 +153,12 @@
 
         .navbar-nav a {
             text-decoration: none;
-            color: #000; /* Defina a cor desejada para os links */
+            color: #000;
         }
 
     .container {
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-start;
         padding: 20px;
         width: 80%;
         max-width: 1200px;
@@ -171,6 +166,7 @@
 
     .column {
         flex: 1;
+        flex-grow: 1;
         padding: 0 10px;
         display: flex;
         flex-direction: column;

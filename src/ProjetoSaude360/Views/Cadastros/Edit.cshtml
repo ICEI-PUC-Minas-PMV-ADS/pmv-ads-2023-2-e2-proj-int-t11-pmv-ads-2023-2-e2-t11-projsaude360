@@ -4,20 +4,21 @@
     Layout = null;
 }
 
+
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="pt-br">
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Edição de Perfil</title>
-</head>
+  </head>
 
 <body>
     <header class="cabecalho">
-        <input type="checkbox" id="chec">
+        <input type="checkbox" id="chec" />
         <label for="chec">
-            <img class="menu" src="/images/menu_barra.png">
+            <img class="menu" src="/images/menu_barra.png" />
         </label>
         <nav class="navigation">
             <ul class="opcoes">
@@ -28,13 +29,14 @@
             </ul>
         </nav>
 
-        <img class="imagemLogo" src="/images/Logo.png">
+        <img class="imagemLogo" src="/images/Logo.png" />
 
         <ul class="navbar-nav">
             @if (User.Identity.IsAuthenticated)
             {
                 <li class="nav-item">
-                    Olá @User.Identity.Name <a class="nav-link text-dark" asp-area="" asp-controller="Cadastros" asp-action="Logout">Logout</a>
+                    Olá @User.Identity.Name
+                    <a class="nav-link text-dark" asp-area="" asp-controller="Cadastros" asp-action="Logout">Logout</a>
                 </li>
             }
             else
@@ -85,8 +87,8 @@
         </form>
     </div>
 
-
-</body>
+    
+  </body>
 </html>
 
 <style>
@@ -95,6 +97,7 @@
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+        display: flex;
         align-items: center;
         justify-content: center;
         height: 100vh;
@@ -105,7 +108,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        background-color: #fff;
+        background-color: #fff; /* Adicione uma cor de fundo para o cabeçalho, se necessário */
         padding: 10px 20px;
         box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
     }
@@ -124,6 +127,7 @@
         padding: 0;
         margin: 0;
         display: flex;
+        gap: 20px;
     }
 
         .opcoes li {
@@ -132,11 +136,11 @@
 
         .opcoes a {
             text-decoration: none;
-            color: #000;
+            color: #000; /* Defina a cor desejada para os links */
         }
 
     .imagemLogo {
-        width: 100px;
+        width: 100px; /* Ajuste o tamanho conforme necessário */
         height: auto;
     }
 
@@ -145,6 +149,7 @@
         padding: 0;
         margin: 0;
         display: flex;
+        gap: 20px;
     }
 
         .navbar-nav li {
@@ -153,12 +158,12 @@
 
         .navbar-nav a {
             text-decoration: none;
-            color: #000;
+            color: #000; /* Defina a cor desejada para os links */
         }
 
     .container {
         display: flex;
-        justify-content: flex-start;
+        justify-content: space-between;
         padding: 20px;
         width: 80%;
         max-width: 1200px;
@@ -166,7 +171,6 @@
 
     .column {
         flex: 1;
-        flex-grow: 1;
         padding: 0 10px;
         display: flex;
         flex-direction: column;

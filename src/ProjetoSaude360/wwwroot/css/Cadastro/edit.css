@@ -2,99 +2,139 @@
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
     background: linear-gradient( 155deg, #fbfbfb 59.05%, #f5e48b 70.08%, #f7e271 76%, #f7dd53 80.29% );
 }
 
-.header {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
+.cabecalho {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff; /* Adicione uma cor de fundo para o cabeçalho, se necessário */
+    padding: 10px 20px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.title-container {
-    text-align: center;
-    margin-top: 49px;
+.menu {
+    width: 30px;
+    height: 30px;
 }
 
-.title {
-    font-size: 24px;
+.navigation {
+    display: none;
 }
+
+.opcoes {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+    .opcoes li {
+        margin: 0;
+    }
+
+    .opcoes a {
+        text-decoration: none;
+        color: #000; /* Defina a cor desejada para os links */
+    }
+
+.imagemLogo {
+    width: 100px; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+}
+
+.navbar-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+    .navbar-nav li {
+        margin: 0;
+    }
+
+    .navbar-nav a {
+        text-decoration: none;
+        color: #000; /* Defina a cor desejada para os links */
+    }
 
 .container {
     display: flex;
-    height: 782px;
-    justify-content: space-around;
-    display: flex;
+    justify-content: flex-start;
+    padding: 20px;
+    width: 80%;
+    max-width: 1200px;
 }
 
 .column {
     flex: 1;
-    padding: 20px;
+    flex-grow: 1;
+    padding: 0 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 180px;
 }
 
 .profile-picture {
-    width: 224px;
-    height: 220.014px;
-    background-color: #ccc;
-    margin-bottom: 20px;
+    width: 150px;
+    height: 150px;
+    background-color: #ddd;
+    border-radius: 50%;
+    margin-bottom: 10px;
 }
 
 .form-group {
     margin-bottom: 15px;
-    width: 100%;
-    max-width: 479px;
+    text-align: center;
 }
 
 label {
     display: block;
     margin-bottom: 5px;
-    margin-left: 8px;
 }
 
-input[type='text'] {
-    width: 100%;
+.form-control {
+    width: 225px;
     height: 39px;
+    flex-shrink: 0;
     border-radius: 24px;
     background: rgba(70, 71, 69, 0.3);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
-    padding: 10px;
-    font-size: 16px;
-    border: none;
+    padding: 8px;
     box-sizing: border-box;
-    margin-bottom: 24px;
+    margin-bottom: 10px;
 }
 
 .buttons {
-    text-align: center;
-    margin-top: 20px;
     display: flex;
-    margin-left: 50%;
+    margin-top: 20px;
+    margin-left: 80px;
+    width: 100%;
+    gap: 25px;
+}
+
+.edit-button,
+.cancel-button {
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 20px;
+    color: #fff;
+    font-weight: bold;
+    width: 120px;
+    text-align: center;
+    text-transform: uppercase;
 }
 
 .edit-button {
     background-color: #4caf50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    margin-right: 10px;
-    cursor: pointer;
 }
 
 .cancel-button {
-    background-color: #ff3333;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.edit-button:hover {
-    background-color: #45a049;
+    background-color: #ff0000;
 }

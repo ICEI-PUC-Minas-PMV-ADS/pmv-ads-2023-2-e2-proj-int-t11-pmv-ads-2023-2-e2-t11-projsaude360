@@ -25,10 +25,9 @@
         <nav class="navigation">
             <ul class="opcoes">
                 <li><a href="https://localhost:7156">Início</a></li>
-                <li><a href="https://localhost:7156/Cadastro/PerfilUsuarios">Perfil</a></li>
-                <li><a href="">Tratamentos</a></li>
-                <li><a href="">Medicamentos</a></li>
-                <li><a href="">Ciclo Menstrual</a></li>
+                <li><a href="/Cadastros/PerfilUsuario">Perfil</a></li>
+                <li><a href="/Tratamentos/Index">Tratamentos</a></li>
+                <li><a href="/Medicamentos/Index">Medicamentos</a></li>
             </ul>
         </nav>
 
@@ -85,10 +84,7 @@
                         @if (User.Identity.IsAuthenticated){}
                         else
                         {
-                            <a href="https://localhost:7156/Cadastros/Create" >
-
-                                <button class="botaoCadastro">Cadastre-se</button>
-                            </a>
+                            <button class="botao-cadastro" href="https://localhost:7156/Cadastros/Create">Cadastre-se</button>
                         }
                     </div>
                 </section>

@@ -3,9 +3,11 @@ using System.Security.Claims;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ProjetoSaude360.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ProjetoSaude360.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class CadastrosController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -13,6 +15,8 @@ namespace ProjetoSaude360.Controllers
         public Enums.Genero Generos { get; set; }
 
         public Enums.Perfil Perfis { get; set; }
+
+         public Cadastro Cadastros { get; set; }
 
         public CadastrosController(ApplicationDbContext context)
         {
@@ -26,33 +30,33 @@ namespace ProjetoSaude360.Controllers
                         Problem("Entity set 'ApplicationDbContext.Cadastros'  is null.");
         }
 
+        [AllowAnonymous]
         public IActionResult PerfilUsuario()
         {
             return View();
         }
 
-        public async Task<IActionResult> PerfilUsuario(int id)
+        [AllowAnonymous]
+        public async Task<IActionResult> PerfilUsuario(Cadastro cadastro)
         {
-            if (id == null || _context.Cadastros == null)
+            var idUsuario = await _context.Cadastros.FindAsync(cadastro.Id);
+
+            if (usuario == null)
             {
-                return NotFound();
+                return NotFound(); 
             }
 
-            var cadastro = await _context.Cadastros
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (cadastro == null)
-            {
-                return NotFound();
-            }
-            return View();
+            return View(usuario);
         }
 
+        [AllowAnonymous]
         public IActionResult Login()
         {
             return View();
         }
 
         [HttpPost]
+        [AllowAnonymous]
         public async Task<IActionResult> Login(Cadastro cadastro)
         {
             var data = await _context.Cadastros
@@ -101,6 +105,7 @@ namespace ProjetoSaude360.Controllers
             return RedirectToAction("Index", "Home");
         }
 
+        [AllowAnonymous]
         public async Task<IActionResult> Logout()
         {
             await HttpContext.SignOutAsync();
@@ -125,6 +130,7 @@ namespace ProjetoSaude360.Controllers
             return View(cadastro);
         }
 
+        [AllowAnonymous]
         public IActionResult Create()
         {
             return View();
@@ -132,6 +138,7 @@ namespace ProjetoSaude360.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [AllowAnonymous]
         public async Task<IActionResult> Create([Bind("Id,Nome,Senha,Genero,DataDeNascimento,Email,Telefone,Perfil")] Cadastro cadastro)
         {
             if (ModelState.IsValid)
@@ -144,23 +151,22 @@ namespace ProjetoSaude360.Controllers
             return View(cadastro);
         }
 
-        public async Task<IActionResult> Edit(int? id)
+        public async Task<IActionResult> Edit()
         {
-            if (id == null || _context.Cadastros == null)
+            var idUsuario = ObterUsuarioId();
+
+            if (idUsuario == 0 || _context.Cadastros == null)
             {
                 return NotFound();
             }
 
-            var cadastro = await _context.Cadastros.FindAsync(id);
+            var cadastro = await _context.Cadastros.FindAsync(idUsuario);
             if (cadastro == null)
             {
                 return NotFound();
             }
 
-            _context.Add(cadastro);
-            await _context.SaveChangesAsync();
-
-            return View();
+            return View(cadastro);
         }
 
         [HttpPost]
@@ -234,6 +240,11 @@ namespace ProjetoSaude360.Controllers
         private bool CadastroExists(int id)
         {
             return (_context.Cadastros?.Any(e => e.Id == id)).GetValueOrDefault();
+        }
+
+        private int ObterUsuarioId()
+        {
+            return Convert.ToInt32(User.FindFirst(ClaimTypes.NameIdentifier)?.Value?.ToString());
         }
     }
 }

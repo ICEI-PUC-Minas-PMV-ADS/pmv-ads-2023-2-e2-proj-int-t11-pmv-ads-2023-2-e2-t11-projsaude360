@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -9,21 +11,30 @@ using ProjetoSaude360.Models;
 
 namespace ProjetoSaude360.Controllers
 {
+    [Authorize]
     public class TratamentosController : Controller
     {
         private readonly ApplicationDbContext _context;
+
+        public Cadastro Cadastros { get; set; }
+
+        public IEnumerable<Tratamento>? Tratamentos { get; set; }
 
         public TratamentosController(ApplicationDbContext context)
         {
             _context = context;
         }
 
+
+
         // GET: Tratamentos
         public async Task<IActionResult> Index()
         {
-              return _context.Tratamentos != null ? 
-                          View(await _context.Tratamentos.ToListAsync()) :
-                          Problem("Entity set 'ApplicationDbContext.Tratamentos'  is null.");
+            var idUsuario = ObterUsuarioId();
+
+            return _context.Tratamentos != null ?
+                        View(await _context.Tratamentos.Where(t => t.IdUsuario == idUsuario).ToListAsync()) :
+                        Problem("Entity set 'ApplicationDbContext.Tratamentos'  is null.");
         }
 
         // GET: Tratamentos/Details/5
@@ -44,29 +55,34 @@ namespace ProjetoSaude360.Controllers
             return View(tratamento);
         }
 
-        // GET: Tratamentos/Create
         public IActionResult Create()
         {
+
             return View();
         }
 
-        // POST: Tratamentos/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Dosagem,DataInicio,DataTermino,Obs,Administracao,Tipo")] Tratamento tratamento)
+        public async Task<IActionResult> Create([Bind("Id,Dosagem,DataInicio,DataTermino,Obs,Administracao,Tipo")] Tratamento novoTratamento)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(tratamento);
+                novoTratamento.IdUsuario = ObterUsuarioId();
+
+                _context.Add(novoTratamento);
                 await _context.SaveChangesAsync();
+
                 return RedirectToAction(nameof(Index));
             }
-            return View(tratamento);
+
+            return View();
         }
 
-        // GET: Tratamentos/Edit/5
+        private int ObterUsuarioId()
+        {
+            return Convert.ToInt32(User.FindFirst(ClaimTypes.NameIdentifier)?.Value?.ToString());
+        }
+
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null || _context.Tratamentos == null)
@@ -82,9 +98,6 @@ namespace ProjetoSaude360.Controllers
             return View(tratamento);
         }
 
-        // POST: Tratamentos/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Dosagem,DataInicio,DataTermino,Obs,Administracao,Tipo")] Tratamento tratamento)
@@ -149,14 +162,15 @@ namespace ProjetoSaude360.Controllers
             {
                 _context.Tratamentos.Remove(tratamento);
             }
-            
+
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool TratamentoExists(int id)
         {
-          return (_context.Tratamentos?.Any(e => e.Id == id)).GetValueOrDefault();
+            return (_context.Tratamentos?.Any(e => e.Id == id)).GetValueOrDefault();
         }
     }
 }
+

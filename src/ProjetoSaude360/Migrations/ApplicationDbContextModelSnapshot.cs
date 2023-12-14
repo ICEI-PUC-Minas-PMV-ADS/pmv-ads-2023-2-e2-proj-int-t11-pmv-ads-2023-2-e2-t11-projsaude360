@@ -73,6 +73,9 @@ namespace ProjetoSaude360.Migrations
                     b.Property<DateTime>("DataConsulta")
                         .HasColumnType("datetime2");
 
+                    b.Property<int>("IdUsuario")
+                        .HasColumnType("int");
+
                     b.Property<string>("MotivoConsulta")
                         .HasColumnType("nvarchar(max)");
 
@@ -97,8 +100,14 @@ namespace ProjetoSaude360.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<int?>("CadastrosId")
+                        .HasColumnType("int");
+
                     b.Property<string>("Dosagem")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("IdUsuario")
+                        .HasColumnType("int");
 
                     b.Property<string>("Info")
                         .HasColumnType("nvarchar(max)");
@@ -113,6 +122,8 @@ namespace ProjetoSaude360.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("CadastrosId");
 
                     b.HasIndex("TratamentoId");
 
@@ -142,6 +153,13 @@ namespace ProjetoSaude360.Migrations
                     b.Property<double?>("Dosagem")
                         .HasColumnType("float");
 
+                    b.Property<int>("IdUsuario")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Nome")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Obs")
                         .HasColumnType("nvarchar(max)");
 
@@ -166,9 +184,15 @@ namespace ProjetoSaude360.Migrations
 
             modelBuilder.Entity("ProjetoSaude360.Models.Medicamento", b =>
                 {
+                    b.HasOne("ProjetoSaude360.Models.Cadastro", "Cadastros")
+                        .WithMany("Medicamentos")
+                        .HasForeignKey("CadastrosId");
+
                     b.HasOne("ProjetoSaude360.Models.Tratamento", "Tratamento")
                         .WithMany("Medicamentos")
                         .HasForeignKey("TratamentoId");
+
+                    b.Navigation("Cadastros");
 
                     b.Navigation("Tratamento");
                 });
@@ -185,6 +209,8 @@ namespace ProjetoSaude360.Migrations
             modelBuilder.Entity("ProjetoSaude360.Models.Cadastro", b =>
                 {
                     b.Navigation("Consultas");
+
+                    b.Navigation("Medicamentos");
 
                     b.Navigation("Tratamentos");
                 });

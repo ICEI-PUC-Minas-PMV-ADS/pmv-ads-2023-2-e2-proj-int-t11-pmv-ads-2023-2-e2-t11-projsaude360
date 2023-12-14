@@ -25,5 +25,7 @@ namespace ProjetoSaude360.Models
 
         //Cadastros
         public Cadastro? Cadastros { get; set; }
+        public int IdUsuario { get; set; }
+            
     }
 }

@@ -13,7 +13,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/Medicamentos/medicamentos.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <title>Saude360</title>
 </head>
 
@@ -21,7 +20,7 @@
     <header class="cabecalho">
         <input type="checkbox" id="chec">
         <label for="chec">
-            <img class="menu" src="./imagem/menu_barra.png">
+            <img class="menu" src="/Images/menu_barra.png" alt="Menu de navegação">
         </label>
         <nav class="navigation">
             <ul class="opcoes">
@@ -31,11 +30,13 @@
                 <li><a href="/Medicamentos/Index">Medicamentos</a></li>
             </ul>
         </nav>
+        <img class="imagemLogo" src="/Images/Logo.png" alt="Logo da Saude360">
+
         <ul class="navbar-nav">
             @if (User.Identity.IsAuthenticated)
             {
                 <li class="nav-item">
-                    Olá @User.Identity.Name <a class="nav-link text-dark" asp-area="" asp-controller="Cadastros" asp-action="Logout">Logout</a>
+                    <a class="nav-link text-dark" asp-area="" asp-controller="Cadastros" asp-action="Logout">Logout</a>
                 </li>
             }
             else
@@ -55,19 +56,6 @@
                         <h1 class="titulo-login">Meus medicamentos</h1>
                         <div class="input-single">
                             <div>
-                                @if (ViewBag.MedicamentosExistentes != null && ViewBag.MedicamentosExistentes.Any())
-                                {
-                                    @foreach (var medicamento in ViewBag.MedicamentosExistentes)
-                                    {
-                                        <label class="label-nome-medicamento">@medicamento.Nome</label>
-                                        <button class="btn-excluir-medicamento" onclick="excluirMedicamento(@medicamento.Id)">X</button>
-                                        <br />
-                                    }
-                                }
-                                else
-                                {
-                                    <p>Nenhum medicamento existente.</p>
-                                }
                             </div>
 
                             <div class="add">
@@ -91,59 +79,26 @@
                                 </div>
                                 <div>
                                     <p>Observações:</p>
-                                    <textarea asp-for="Obs" class="form-control"></textarea>
+                                    <input asp-for="Obs" class="form-control" />
                                     <span asp-validation-for="Obs" class="text-danger"></span>
                                 </div>
-                                <input class="butom" type="submit" value="Create" />
-                            </div>
 
-                            <img class="barraV" src="./imagem1/Line 35.png">
+                                <input class="button" type="submit" value="Adicionar" id="botaoAdicionar" />
+                            </div>
                         </div>
                     </form>
                 </div>
+                <img class="fotomedicamentos" src="/Images/imagem_tela_medicamentos.png" alt="Foto Medicamentos">
             </section>
             <div class="imagem-cadastro">
             </div>
         </main>
     </div>
-
-
 </body>
-
 </html>
-
-<script>
-    function excluirMedicamento(id) {
-        if (confirm("Deseja excluir este medicamento?")) {
-            $.ajax({
-                url: '/Medicamentos/ExcluirMedicamento/' + id,
-                type: 'POST',
-                success: function (result) {
-                    if (result.success) {
-                        
-                        location.reload();
-                    } else {
-                        alert(result.message);
-                    }
-                },
-                error: function () {
-                    alert('Erro ao excluir o medicamento.');
-                }
-            });
-        }
-    }
-</script>
 
 @section Scripts {
     @{
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
     }
 }
-
-
-
-
-
-
-
-

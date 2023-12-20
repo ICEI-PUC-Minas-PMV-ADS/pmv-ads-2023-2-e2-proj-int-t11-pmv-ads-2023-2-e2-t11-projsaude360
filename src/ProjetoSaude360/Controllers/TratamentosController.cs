@@ -25,8 +25,6 @@ namespace ProjetoSaude360.Controllers
             _context = context;
         }
 
-
-
         // GET: Tratamentos
         public async Task<IActionResult> Index()
         {
@@ -65,7 +63,7 @@ namespace ProjetoSaude360.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Dosagem,DataInicio,DataTermino,Obs,Administracao,Tipo")] Tratamento novoTratamento)
         {
-            if (ModelState.IsValid)
+            if (ModelState.IsValid == true)
             {
                 novoTratamento.IdUsuario = ObterUsuarioId();
 

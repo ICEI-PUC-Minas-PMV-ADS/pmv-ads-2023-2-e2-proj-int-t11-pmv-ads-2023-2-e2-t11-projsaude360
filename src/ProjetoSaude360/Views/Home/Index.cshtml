@@ -66,31 +66,34 @@
                 <section class="conteudo-secundario">
                     <p class="conteudo-secundario-paragrafo">
                         <img class="seta" src="/images/seta_rosada.png">
-                        Acompanhamento de ciclo menstrual.
+                        Acompanhamento de ciclo menstrual
                     </p>
                     <p class="conteudo-secundario-paragrafo">
                         <img class="seta" src="/images/seta_azul.png">
-                        Listagem e ordenação de tratamentos medicamentosos.
+                        Listagem e ordenação de tratamentos medicamentosos
                     </p>
                     <p class="conteudo-secundario-paragrafo">
                         <img class="seta" src="/images/seta_amarela.png">
-                        Confecção de rotina medicamentosa.
+                        Confecção de rotina medicamentosa
                     </p>
                     <p class="conteudo-secundario-paragrafo">
                         <img class="seta" src="/images/seta_verde.png">
-                        Ordenação e acompanhamento de consultas.
+                        Ordenação e acompanhamento de consultas
                     </p>
                     <div class="div-btn-cadastro">
-                        @if (User.Identity.IsAuthenticated){}
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            
+                        }
                         else
                         {
-                            <button class="botao-cadastro" href="https://localhost:7156/Cadastros/Create">Cadastre-se</button>
+                            <a href="/Cadastros/Create" class="btn-cadastro">Cadastre-se aqui!</a>
                         }
                     </div>
                 </section>
             </div>
             <div class="conteudo-imagem">
-                <img class="imagem_tela_inicial" src="/images/imagen_TelaInicial.png">
+                <img class="imagem_tela_inicial"  src="/images/imagen_TelaInicial.png">
             </div>
         </main>
 

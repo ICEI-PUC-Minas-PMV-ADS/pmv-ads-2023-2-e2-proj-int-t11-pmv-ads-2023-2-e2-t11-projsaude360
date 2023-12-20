@@ -1,0 +1,181 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Sarala&display=swap');
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+body {
+    font-family: Arial;
+    background: url("/Images/background_create_consultas.png");
+    background-size: 100%;
+}
+
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+}
+
+.imagemLogo {
+    padding-left: 120px;
+    padding-top: 15px;
+    height: 40px;
+    width: 80px;
+}
+
+ul {
+    list-style: none;
+}
+
+menu {
+    height: 15px;
+    width: 15px;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+nav {
+    background-color: rgba(133, 133, 133, 0.796);
+    width: 350px;
+    left: -350px;
+    height: 100%;
+    position: absolute;
+    transition: all .5s;
+}
+
+input[type="checkbox"]:checked ~ nav {
+    transform: translateX(350px);
+}
+
+.opcoes {
+    position: absolute;
+    top: 70px;
+    width: 100%;
+}
+
+a {
+    display: block;
+    padding: 35px 20px;
+    color: white;
+    font-size: 25px;
+}
+
+    a:hover {
+        background-color: #4846468e;
+    }
+
+label {
+    padding: 20px;
+    position: absolute;
+    z-index: 1;
+    font-family: 'Righteous', cursive;
+    font-size: 16px;
+    color: #00000088;
+}
+
+.nav-item {
+    display: flex;
+    flex-direction: row;
+    font-family: 'Righteous', cursive;
+    color: black;
+    font-size: 15px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+    .nav-item a {
+        height: 5px;
+        width: 80px;
+        text-align: center;
+        background-color: #909090;
+        border-radius: 15px;
+        padding: 30px 20px;
+    }
+
+    .nav-item .nav-link {
+        display: flex;
+        align-items: center;
+    }
+
+.separador {
+    margin-top: 30px;
+    margin-left: 70px;
+    margin-right: 70px;
+    border-top: 0.04rem solid #6f6c6c38;
+}
+
+
+table{
+    font-size: 15px;
+    font-family: 'Righteous', cursive;
+}
+
+.conteudo {
+    margin-top: 150px;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    width:90%;
+    margin: 5vh auto;
+    padding: 20px;
+    gap: 20px;
+}
+
+.button-nova-consulta {
+    margin-top: 40px;
+    height: 25px;
+    width: 150px;
+    font-size: 15px;
+    color: black;
+    font-family: 'Righteous', cursive;
+    justify-content:center;
+    border-style: none;
+    cursor: pointer;
+    background-color: white;
+}
+
+.button-excluir {
+    background-color: white;
+    border-style: none;
+    cursor: pointer;
+    background-color: white;
+    color: red;
+    font-family: 'Righteous', cursive;
+
+}
+
+.records{
+    width: 100%;
+    user-select: none;
+    text-align: left;
+
+}
+
+    .records th {
+        height: 50px;
+        background-color: #B7B7B7;
+        color: white;
+        padding-left: 20px;
+        text-align:center;
+    }
+    
+    .records td{
+        height: 50px;
+        padding-left: 20px;
+        text-align: center;
+    }
+
+    .records th:last-child,
+    .records td:last-child {
+        min-width: 160px;
+        padding: 0;
+    }
+
+  

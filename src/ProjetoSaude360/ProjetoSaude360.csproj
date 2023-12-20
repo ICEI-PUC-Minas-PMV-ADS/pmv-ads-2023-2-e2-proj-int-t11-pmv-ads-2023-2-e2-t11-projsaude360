@@ -7,9 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="wwwroot\css\Consulta\NovaPasta\**" />
     <Compile Remove="wwwroot\css\NewFolder\**" />
+    <Content Remove="wwwroot\css\Consulta\NovaPasta\**" />
     <Content Remove="wwwroot\css\NewFolder\**" />
+    <EmbeddedResource Remove="wwwroot\css\Consulta\NovaPasta\**" />
     <EmbeddedResource Remove="wwwroot\css\NewFolder\**" />
+    <None Remove="wwwroot\css\Consulta\NovaPasta\**" />
     <None Remove="wwwroot\css\NewFolder\**" />
   </ItemGroup>
 

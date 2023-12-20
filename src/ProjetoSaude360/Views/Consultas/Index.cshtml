@@ -1,49 +1,103 @@
 ﻿@model IEnumerable<ProjetoSaude360.Models.Consulta>
 
 @{
-    ViewData["Title"] = "Index";
+    Layout = null;
 }
 
-<h1>Index</h1>
+<!DOCTYPE html>
+<html lang="pt-br">
 
-<p>
-    <a asp-action="Create">Adicionar Nova Consulta</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.NomeMedico)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.MotivoConsulta)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DataConsulta)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Recomendacoes)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.NomeMedico)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MotivoConsulta)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DataConsulta)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Recomendacoes)
-            </td>
-           
-        </tr>
-}
-    </tbody>
-</table>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/Consulta/indexConsulta.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <title>Saude360</title>
+</head>
+
+<body>
+    <header class="cabecalho">
+        <input type="checkbox" id="chec">
+        <label for="chec">
+            <img class="menu" src="/images/menu_barra.png">
+        </label>
+        <nav class="navigation">
+            <ul class="opcoes">
+                <li><a href="https://localhost:7156">Início</a></li>
+                <li><a href="/Cadastros/PerfilUsuario">Perfil</a></li>
+                <li><a href="/Tratamentos/Index">Tratamentos</a></li>
+                <li><a href="/Medicamentos/Index">Medicamentos</a></li>
+            </ul>
+        </nav>
+
+        <img class="imagemLogo" src="/images/Logo.png">
+
+        <ul class="navbar-nav">
+            @if (User.Identity.IsAuthenticated)
+            {
+                <li class="nav-item">
+                    Olá @User.Identity.Name <a class="nav-link text-dark" asp-area="" asp-controller="Cadastros" asp-action="Logout">Logout</a>
+                </li>
+            }
+            else
+            {
+                <li class="nav-item">
+                    <a class="nav-link text-dark" asp-area="" asp-controller="Cadastros" asp-action="Login">Login</a>
+                </li>
+            }
+        </ul>
+    </header>
+
+    <div class="separador">
+            <a asp-action="Create" class="button-nova-consulta">Adicionar Nova Consulta</a>
+        <main class="conteudo">
+            <table class="records">
+                <thead>
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.NomeMedico)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.MotivoConsulta)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.DataConsulta)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Recomendacoes)
+                        </th>
+                        <th>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.NomeMedico)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.MotivoConsulta)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.DataConsulta)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Recomendacoes)
+                            </td>
+                            <td>
+                                <button type="button" class="button-excluir">Excluir</button>
+                            </td>
+                            
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </main>
+    </div>
+
+</body>
+
+</html>

@@ -3,14 +3,13 @@
     "",
     "\\src",
     "\\src\\ProjetoSaude360",
-    "\\src\\ProjetoSaude360\\ProjetoSaude360",
-    "\\src\\ProjetoSaude360\\ProjetoSaude360\\ProjetoSaude360",
     "\\src\\ProjetoSaude360\\Views",
+    "\\src\\ProjetoSaude360\\Views\\Cadastros",
     "\\src\\ProjetoSaude360\\Views\\Consultas",
-    "\\src\\ProjetoSaude360\\Views\\Home",
+    "\\src\\ProjetoSaude360\\Views\\Medicamentos",
+    "\\src\\ProjetoSaude360\\Views\\Tratamentos",
     "\\src\\ProjetoSaude360\\wwwroot",
     "\\src\\ProjetoSaude360\\wwwroot\\css"
   ],
-  "SelectedNode": "\\src\\ProjetoSaude360\\Views\\Consultas\\Create.cshtml",
   "PreviewInSolutionExplorer": false
 }
